@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load i18n staticfiles custom_filters configs_tags meta_tags custom_tags %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <div class="content_block">
+        <div class="content profile_page">
+
+            <div class="profile_links">
+                <ul>
+                    <li>
+                        <a href="{% url 'my_courses' %}" title="">{% trans 'My courses' %}</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'profile_payments' %}" title="">{% trans 'Payments' %}</a>
+                    </li>
+                    <li>
+                        {% trans 'Profile' %}
+                    </li>
+                </ul>
+            </div>
+
+            <div class="profile_block">
+                <div class="main_column">
+                    <h1 class="caption">{% trans 'Profile' %}</h1>
+                    <a href="{% url 'profile_edit' %}" title="" class="edit_link">{% trans 'Edit profile' %}</a>
+
+                    <div class="info_block">
+                        <p class="info_row">
+                            <b class="label">{% trans 'Name' %}:</b>
+                            {{ user.get_full_name }}
+                        </p>
+
+                        <p class="info_row">
+                            <b class="label">{% trans 'Tel' %}:</b>
+                            {{ user.phone }}
+                        </p>
+
+                        <p class="info_row">
+                            <b class="label">{% trans 'City' %}:</b>
+                            {{ user.city }}
+                        </p>
+
+                        <p class="info_row">
+                            <b class="label">{% trans 'Company' %}:</b>
+                            {{ user.company }}
+                        </p>
+
+                        <p class="info_row">
+                            <b class="label">{% trans 'Skype name' %}:</b>
+                            {{ user.skype }}
+                        </p>
+
+                        <p class="info_row">
+                            <b class="label">{% trans 'Е-mail' %}:</b>
+                            {{ user.email }}
+                        </p>
+
+                        <p class="info_row">
+                            <b class="label">{% trans 'Password' %}:</b>
+                            ******
+                        </p>
+                    </div>
+                </div>
+
+                <div class="right_column">
+                    <div class="avatar">
+                        {% if user.avatar %}
+                            <img src="{{ user.avatar_view.url }}" alt="" title=""/>
+                        {% else %}
+                            <img src="{% static 'img/profile_avatar.png' %}" alt="" title=""/>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="clear_both"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

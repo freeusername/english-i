@@ -1,0 +1,6 @@
+{% load i18n %}
+{% trans 'Full name' %}: {{ user.full_name }}
+{% if user.phone %}{% trans 'Phone' %}: {{ user.phone }}{% endif %}
+{% if user.email %}{% trans 'Email' %}: {{ user.email }}{% endif %}
+{% trans 'Profile' %}: http://{{ site.domain }}/admin/accounts/user/{{ user.id }}/
+{% trans 'Course' %}: http://{{ site.domain }}/admin/courses/course/{{ course.id }}/

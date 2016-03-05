@@ -1,0 +1,1 @@
+{% load i18n %}{% with site_name=site.name %}{% blocktrans %}Message from {{ site_name }}.{% endblocktrans %}{% endwith %}

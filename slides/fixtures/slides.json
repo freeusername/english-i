@@ -1,0 +1,87 @@
+[
+{
+    "fields": {
+        "top_text": "<p style=\"font-size: 36px; font-weight: bold;\"><span>ENGLISH FOR <span style=\"color: #888888;\"><strong style=\"font-size: 50px; color: #039be5;\">IT</strong></span> PROFESSIONALS <span style=\"color: #888888;\"><strong style=\"font-size: 50px; color: #039be5;\">ONLY</strong></span></span></p>\r\n<p style=\"font-size: 20px;\"><span style=\"font-size: x-large;\">Did your lack of English skills let you down Again..?</span></p>\r\n<p><br /> <br /> <br /> <br /> </p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+        "bottom_text_en": "<p style=\"font-size: 16px;\">&nbsp;<span style=\"font-size: x-large;\"><span style=\"font-size: 14pt;\">It's Time you dive in</span></span></p>\r\n<p style=\"font-size: 16px;\">&nbsp;<span style=\"font-size: small;\"><a class=\"button\" href=\"courses/\">Let's get started</a></span></p>",
+        "top_text_ru": "<p style=\"font-size: 36px; font-weight: bold;\"><span>\u0410\u041d\u0413\u041b\u0418\u0419\u0421\u041a\u0418\u0419 \u0414\u041b\u042f&nbsp;<span style=\"color: #888888;\"><strong style=\"font-size: 50px; color: #039be5;\">IT</strong></span>&nbsp;\u0421\u041f\u0415\u0426\u0418\u0410\u041b\u0418\u0421\u0422\u041e\u0412</span></p>\r\n<p style=\"font-size: 20px;\"><span style=\"font-size: x-large;\">\u041e\u043f\u044f\u0442\u044c \u043d\u0435 \u0445\u0432\u0430\u0442\u0438\u043b\u043e \u0437\u043d\u0430\u043d\u0438\u0439 \u0430\u043d\u0433\u043b\u0438\u0439\u0441\u043a\u043e\u0433\u043e?</span></p>\r\n<p><br /> <br /> <br /> <br /> <br /> </p>",
+        "show": true,
+        "image": "slides/images/a696880b-0ebc-4453-ad6a-d588329b384e.jpg",
+        "updated_at": "2016-01-20T08:48:51.205Z",
+        "bottom_text_ru": "<p style=\"font-size: 16px;\"><span style=\"font-size: x-large;\">\u041f\u043e\u0440\u0430 \u0438\u0437\u043c\u0435\u043d\u0438\u0442\u044c \u044d\u0442\u043e<br /></span><span style=\"font-size: small;\"><a class=\"button\" href=\"courses/\">\u0414\u0430\u0432\u0430\u0439\u0442\u0435 \u043d\u0430\u0447\u043d\u0435\u043c</a></span></p>",
+        "position": 0,
+        "bottom_text": "<p style=\"font-size: 16px;\">&nbsp;<span style=\"font-size: x-large;\"><span style=\"font-size: 14pt;\">It's Time you dive in</span></span></p>\r\n<p style=\"font-size: 16px;\">&nbsp;<span style=\"font-size: small;\"><a class=\"button\" href=\"courses/\">Let's get started</a></span></p>",
+        "created_at": "2015-12-07T02:32:41.748Z",
+        "top_text_en": "<p style=\"font-size: 36px; font-weight: bold;\"><span>ENGLISH FOR <span style=\"color: #888888;\"><strong style=\"font-size: 50px; color: #039be5;\">IT</strong></span> PROFESSIONALS <span style=\"color: #888888;\"><strong style=\"font-size: 50px; color: #039be5;\">ONLY</strong></span></span></p>\r\n<p style=\"font-size: 20px;\"><span style=\"font-size: x-large;\">Did your lack of English skills let you down Again..?</span></p>\r\n<p><br /> <br /> <br /> <br /> </p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>"
+    },
+    "model": "slides.slide",
+    "pk": 1
+},
+{
+    "fields": {
+        "top_text": "<p style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: verdana, geneva;\"><strong><span style=\"font-size: xx-large;\"><span style=\"color: #00ccff;\">STATS</span></span></strong></span></p>",
+        "bottom_text_en": "<div class=\"page\" title=\"Page 1\">\r\n<div class=\"section\">\r\n<div class=\"layoutArea\">\r\n<div class=\"column\">\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p style=\"text-align: center;\"><span style=\"font-family: helvetica; font-size: x-large;\">English skills can not only raise your salary by up to <span style=\"font-size: xx-large;\"><strong>30%</strong></span><span style=\"font-size: xx-large;\"><strong><span style=\"color: #00ccff;\"><br /></span></strong></span></span></p>\r\n<p><span style=\"font-family: helvetica; font-size: x-large;\">but also increase your chances for a managerial position by up to </span><strong><span style=\"font-size: xx-large;\"><span style=\"font-family: helvetica;\">60%</span></span></strong></p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p><strong><span style=\"font-size: xx-large;\"><span style=\"font-family: helvetica;\"><br /><span style=\"font-size: small;\"><a class=\"button\" href=\"courses/\">Try it yourself</a></span></span><span style=\"font-family: helvetica;\"><br /></span></span></strong></p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>",
+        "top_text_ru": "<p style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: verdana, geneva;\"><strong><span style=\"font-size: xx-large;\"><span style=\"color: #00ccff;\">\u0421\u0422\u0410\u0422\u0418\u0421\u0422\u0418\u041a\u0410</span></span></strong></span></p>",
+        "show": true,
+        "image": "slides/images/f5d06d75-3d78-4164-8195-5c3fe0e30ece.jpeg",
+        "updated_at": "2016-01-20T08:48:34.756Z",
+        "bottom_text_ru": "<div class=\"page\" title=\"Page 1\">\r\n<div class=\"section\">\r\n<div class=\"layoutArea\">\r\n<div class=\"column\">\r\n<p style=\"text-align: center;\"><span style=\"font-family: helvetica; font-size: x-large;\">\u0417\u043d\u0430\u043d\u0438\u0435 \u044f\u0437\u044b\u043a\u0430 \u0443\u0432\u0435\u043b\u0438\u0447\u0438\u0432\u0430\u0435\u0442 \u0437\u0430\u0440\u043f\u043b\u0430\u0442\u0443 \u043d\u0430&nbsp;<span style=\"font-size: xx-large;\"><strong>30%&nbsp;</strong></span><span style=\"font-size: xx-large;\"><strong><span style=\"color: #00ccff;\"><br /></span></strong></span></span></p>\r\n<p><span style=\"font-family: helvetica; font-size: x-large;\"><span style=\"font-family: helvetica;\">\u0438 <span>\u043d\u0430&nbsp;</span><span><strong><span><span>60%&nbsp;</span></span></strong></span>\u0443\u0432\u0435\u043b\u0438\u0447\u0438\u0432\u0430\u0435\u0442 \u0448\u0430\u043d\u0441\u044b \u043f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0447\u0435\u0441\u043a\u0443\u044e \u043f\u043e\u0437\u0438\u0446\u0438\u044e&nbsp;</span><span><strong><span style=\"font-size: xx-large;\"><span style=\"font-family: helvetica;\"><br /><span style=\"font-size: small;\"><a class=\"button\" href=\"courses/\">\u041f\u043e\u043f\u0440\u043e\u0431\u0443\u0439\u0442\u0435 \u0441\u0430\u043c\u0438</a></span></span><span style=\"font-family: helvetica;\"><br /></span></span></strong></span></span></p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>",
+        "position": 1,
+        "bottom_text": "<div class=\"page\" title=\"Page 1\">\r\n<div class=\"section\">\r\n<div class=\"layoutArea\">\r\n<div class=\"column\">\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p style=\"text-align: center;\"><span style=\"font-family: helvetica; font-size: x-large;\">English skills can not only raise your salary by up to <span style=\"font-size: xx-large;\"><strong>30%</strong></span><span style=\"font-size: xx-large;\"><strong><span style=\"color: #00ccff;\"><br /></span></strong></span></span></p>\r\n<p><span style=\"font-family: helvetica; font-size: x-large;\">but also increase your chances for a managerial position by up to </span><strong><span style=\"font-size: xx-large;\"><span style=\"font-family: helvetica;\">60%</span></span></strong></p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p><strong><span style=\"font-size: xx-large;\"><span style=\"font-family: helvetica;\"><br /><span style=\"font-size: small;\"><a class=\"button\" href=\"courses/\">Try it yourself</a></span></span><span style=\"font-family: helvetica;\"><br /></span></span></strong></p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>",
+        "created_at": "2015-12-12T22:00:39.589Z",
+        "top_text_en": "<p style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: verdana, geneva;\"><strong><span style=\"font-size: xx-large;\"><span style=\"color: #00ccff;\">STATS</span></span></strong></span></p>"
+    },
+    "model": "slides.slide",
+    "pk": 2
+},
+{
+    "fields": {
+        "top_text": "<div class=\"page\" style=\"padding-top: 10px;\" title=\"Page 2\">\r\n<div class=\"section\">\r\n<div class=\"layoutArea\">\r\n<div class=\"column\">\r\n<p><span style=\"font-size: xx-large; font-family: helvetica;\"><span style=\"color: #00ccff;\"><strong>CHOOSE</strong></span> <span style=\"font-size: x-large;\">WHAT YOU</span> <strong><span style=\"color: #00ccff;\">NEED</span></strong></span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-size: x-large; font-family: helvetica; color: #ffffff;\">No one else knows you better</span></p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>",
+        "bottom_text_en": "<p style=\"text-align: center;\"><span style=\"font-family: helvetica; font-size: x-large;\"><strong>You can create</strong> your own course<br /><a class=\"button\" href=\"en/course/create/\"> Create</a><br /></span></p>",
+        "top_text_ru": "<div class=\"page\" style=\"padding-top: 10px;\" title=\"Page 2\">\r\n<div class=\"section\">\r\n<div class=\"layoutArea\">\r\n<div class=\"column\">\r\n<p><span style=\"font-size: xx-large; font-family: helvetica;\"><span style=\"color: #00ccff;\"><strong>\u0412\u042b\u0411\u0418\u0420\u0410\u0419\u0422\u0415</strong></span> <span style=\"font-size: x-large;\">\u0422\u041e, \u0427\u0422\u041e \u0412\u0410\u041c</span> <strong><span style=\"color: #00ccff;\">\u041d\u0423\u0416\u041d\u041e<br /><br /></span></strong></span></p>\r\n<p><span style=\"font-size: x-large; font-family: helvetica; color: #ffffff;\">\u0422\u043e\u043b\u044c\u043a\u043e \u0443 \u043d\u0430\u0441 \u0432\u044b \u0443\u0447\u0438\u0442\u0435 \u0442\u043e, \u0447\u0442\u043e \u043f\u043e\u0434\u0445\u043e\u0434\u0438\u0442 \u0438\u043c\u0435\u043d\u043d\u043e \u0432\u0430\u043c</span></p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>",
+        "show": true,
+        "image": "slides/images/3fb28326-da8b-4712-b696-0591fad50625.jpeg",
+        "updated_at": "2016-01-18T19:41:26.128Z",
+        "bottom_text_ru": "<p style=\"text-align: center;\"><span style=\"font-family: helvetica; font-size: x-large;\">\u0423 \u043d\u0430\u0441 \u0432\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u0441\u043e\u0437\u0434\u0430\u0442\u044c \u0441\u043e\u0431\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0439 \u043a\u0443\u0440\u0441</span></p>\r\n<p style=\"text-align: center;\"><a class=\"button\" href=\"ru/course/create/\">\u0421\u043e\u0437\u0434\u0430\u0442\u044c</a></p>",
+        "position": 2,
+        "bottom_text": "<p style=\"text-align: center;\"><span style=\"font-family: helvetica; font-size: x-large;\"><strong>You can create</strong> your own course<br /><a class=\"button\" href=\"en/course/create/\"> Create</a><br /></span></p>",
+        "created_at": "2015-12-16T12:32:58.338Z",
+        "top_text_en": "<div class=\"page\" style=\"padding-top: 10px;\" title=\"Page 2\">\r\n<div class=\"section\">\r\n<div class=\"layoutArea\">\r\n<div class=\"column\">\r\n<p><span style=\"font-size: xx-large; font-family: helvetica;\"><span style=\"color: #00ccff;\"><strong>CHOOSE</strong></span> <span style=\"font-size: x-large;\">WHAT YOU</span> <strong><span style=\"color: #00ccff;\">NEED</span></strong></span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-size: x-large; font-family: helvetica; color: #ffffff;\">No one else knows you better</span></p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>"
+    },
+    "model": "slides.slide",
+    "pk": 3
+},
+{
+    "fields": {
+        "top_text": "<div class=\"page\" style=\"padding-top: 10px;\" title=\"Page 2\">\r\n<div class=\"section\">\r\n<div class=\"layoutArea\">\r\n<div class=\"column\">\r\n<p style=\"text-align: center;\"><span style=\"font-family: helvetica; font-size: xx-large;\"><strong><span>\"</span><span style=\"color: #00ccff;\"><strong>TALKING WITH CUSTOMERS</strong></span><span>&rdquo;</span></strong></span></p>\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p style=\"text-align: center;\"><span style=\"font-family: helvetica; font-size: xx-large;\"><strong>START</strong> with one of our most <strong>POPULAR</strong> courses</span><span style=\"font-family: helvetica; font-size: xx-large;\">&nbsp;</span></p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>",
+        "bottom_text_en": "<p><a class=\"button\" href=\"courses/\">Start a course</a></p>",
+        "top_text_ru": "<div class=\"page\" style=\"padding-top: 10px;\" title=\"Page 2\">\r\n<div class=\"section\">\r\n<div class=\"layoutArea\">\r\n<div class=\"column\">\r\n<p style=\"text-align: center;\"><span style=\"font-family: helvetica; font-size: xx-large;\"><strong><span>\"</span><span style=\"color: #00ccff;\"><strong>\u041e\u0431\u0449\u0435\u043d\u0438\u0435 \u0441 \u0437\u0430\u043a\u0430\u0437\u0447\u0438\u043a\u043e\u043c</strong></span><span>&rdquo;</span></strong></span></p>\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p style=\"text-align: center;\"><span style=\"font-family: helvetica; font-size: xx-large;\">\u0421\u0430\u043c\u044b\u0439 \u043f\u043e\u043f\u0443\u043b\u044f\u0440\u043d\u044b\u0439 \u043a\u0443\u0440\u0441 \u043e\u0431\u044a\u044f\u0441\u043d\u0438\u0442 \u0442\u043e\u043d\u043a\u043e\u0441\u0442\u0438</span></p>\r\n<p style=\"text-align: center;\"><span style=\"font-family: helvetica; font-size: xx-large;\"> \u043e\u0431\u0449\u0435\u043d\u0438\u044f \u0441 \u0438\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u043c\u0438 \u0437\u0430\u043a\u0430\u0437\u0447\u0438\u043a\u0430\u043c\u0438</span></p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>",
+        "show": true,
+        "image": "slides/images/c4af881a-9f34-4b14-a8a8-2132c1bd7cf9.jpeg",
+        "updated_at": "2016-01-20T08:53:32.935Z",
+        "bottom_text_ru": "<p><a class=\"button\" href=\"courses/\">\u041d\u0430\u0447\u0430\u0442\u044c \u043a\u0443\u0440\u0441</a></p>",
+        "position": 3,
+        "bottom_text": "<p><a class=\"button\" href=\"courses/\">Start a course</a></p>",
+        "created_at": "2015-12-19T08:43:23.755Z",
+        "top_text_en": "<div class=\"page\" style=\"padding-top: 10px;\" title=\"Page 2\">\r\n<div class=\"section\">\r\n<div class=\"layoutArea\">\r\n<div class=\"column\">\r\n<p style=\"text-align: center;\"><span style=\"font-family: helvetica; font-size: xx-large;\"><strong><span>\"</span><span style=\"color: #00ccff;\"><strong>TALKING WITH CUSTOMERS</strong></span><span>&rdquo;</span></strong></span></p>\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p style=\"text-align: center;\"><span style=\"font-family: helvetica; font-size: xx-large;\"><strong>START</strong> with one of our most <strong>POPULAR</strong> courses</span><span style=\"font-family: helvetica; font-size: xx-large;\">&nbsp;</span></p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>"
+    },
+    "model": "slides.slide",
+    "pk": 4
+},
+{
+    "fields": {
+        "top_text": "<p style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: helvetica; color: #00ccff;\"><strong><span style=\"font-size: xx-large;\">CALL US</span></strong></span></p>\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p style=\"text-align: center;\"><span style=\"font-size: x-large; font-family: helvetica;\">for a free <strong>DEMO </strong>lesson</span></p>",
+        "bottom_text_en": "<p><span style=\"font-size: x-large; font-family: helvetica;\">Reach out to us..</span></p>",
+        "top_text_ru": "<p style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: helvetica; color: #00ccff;\"><strong><span style=\"font-size: xx-large;\">\u0414\u0415\u041c\u041e-\u0423\u0420\u041e\u041a \u0411\u0415\u0421\u041f\u041b\u0410\u0422\u041d\u041e</span></strong></span></p>\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p style=\"text-align: center;\"><span style=\"font-size: x-large; font-family: helvetica;\">\u041f\u043e\u0437\u0432\u043e\u043d\u0438\u0442\u0435 \u043d\u0430\u043c \u0438 \u043f\u043e\u043f\u0440\u043e\u0431\u0443\u0439\u0442\u0435 \u043d\u0430\u0448\u0443 \u043c\u0435\u0442\u043e\u0434\u0438\u043a\u0443</span></p>",
+        "show": true,
+        "image": "slides/images/f9936a88-5f1c-44b6-bec4-4009ea7090c3.jpeg",
+        "updated_at": "2016-01-18T19:37:57.736Z",
+        "bottom_text_ru": null,
+        "position": 4,
+        "bottom_text": "<p><span style=\"font-size: x-large; font-family: helvetica;\">Reach out to us..</span></p>",
+        "created_at": "2015-12-19T08:59:30.391Z",
+        "top_text_en": "<p style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: helvetica; color: #00ccff;\"><strong><span style=\"font-size: xx-large;\">CALL US</span></strong></span></p>\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p style=\"text-align: center;\"><span style=\"font-size: x-large; font-family: helvetica;\">for a free <strong>DEMO </strong>lesson</span></p>"
+    },
+    "model": "slides.slide",
+    "pk": 5
+}
+]

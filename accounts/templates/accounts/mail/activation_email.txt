@@ -1,0 +1,8 @@
+{% load i18n configs_tags %}
+{% load url from future %}
+{% get_config 'mail_message_main' %}
+
+Password: {{ password }}
+http://{{site.domain}}{% url 'registration_activate' activation_key %}
+
+{% get_config 'mail_message_signature' %}

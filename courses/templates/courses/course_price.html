@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% load i18n staticfiles custom_filters configs_tags meta_tags custom_tags %}
+
+{% block meta_tags %}
+    {% include_meta_tags %}
+{% endblock %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/prices.css' %}"/>
+{% endblock %}
+
+{% block js %}
+    {{ block.super }}
+    <script src="{% static 'js/jquery.form.js' %}"></script>
+    <script src="{% static 'js/jquery.ezmark.js' %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.prices_page .radios').ezMark();
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.radios').click(function () {
+                var $self = $(this);
+                var ppl_en = $self.data('ppl_en');
+                var ppl_ru = $self.data('ppl_ru');
+                var fp_en = $self.data('fp_en');
+                var fp_ru = $self.data('fp_ru');
+                var int_id = $self.data('int_id');
+                var dur_id = $self.data('dur_id');
+                {% if LANGUAGE_CODE == 'en' %}
+                    $('p#full_price_' + int_id).html('<span class="currency">{% trans '$' %}</span>&nbsp;' + fp_en);
+                    $('p#price_' + int_id).html('<span class="currency">{% trans '$' %}</span>&nbsp;' + ppl_en);
+                {% else %}
+                    $('p#full_price_' + int_id).html(fp_ru + '&nbsp;<span class="currency">{% trans '$' %}</span>');
+                    $('p#price_' + int_id).html(ppl_ru +'&nbsp;<span class="currency">{% trans '$' %}</span>');
+                {% endif %}
+{#                {% if LANGUAGE_CODE == 'en' %}#}
+{#                    $('p#price_' + int_id).html('<span class="currency">{% trans '$' %}</span> ' + ppl_en);#}
+{#                {% else %}#}
+{#                    $('p#price_' + int_id).html(ppl_ru +' <span class="currency">{% trans '$' %}</span>');#}
+{#                {% endif %}#}
+{#                $('#id_form-' + int_id + '-price_en').val(fp_en);#}
+{#                $('#id_form-' + int_id + '-price_ru').val(fp_ru);#}
+                $('#id_form-' + int_id + '-price').val(fp_en);
+                $('#id_form-' + int_id + '-duration_id').val(dur_id);
+            });
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="content_block">
+        <div class="content prices_page">
+
+            <h1 class="page_title">{% trans 'Prices' %}</h1>
+
+            <div class="text_block">
+                {% get_config 'price_top_text' %}
+                {% if not invoice.course.course.no_skills %}
+{#                <p>{% trans 'To select the list of required skills will contact the teacher.' %}</p>#}
+{#                {% else %}#}
+                    <p>{% trans 'Chosen skills' %}:
+                        {% for skill in skills %}
+                            "{{ skill.title }}"
+                        {% if not forloop.last %},
+                        {% else %}.{% endif %}
+                        {% endfor %}
+                        {% trans 'Total duration' %} - {{ lessons }}.</p>
+                {% endif %}
+            </div>
+
+            <div class="prices_block">
+                {% for intensity in intensities %}
+                    <div class="price_block">
+                        {% if intensity.recommended %}<span class="recomended_label"></span>{% endif %}
+
+                        <form name="" id="intensity_{{ intensity.pk }}" class="intensity_form" action="" method="post">
+                            {% csrf_token %}
+                            {{ form_set.management_form }}
+                            <p class="title">{{ intensity.title }}</p>
+
+                            <p class="short_info">{{ intensity.description }}</p>
+
+                            <div class="duration">
+                                <p class="caption">{% trans 'Duration' %}</p>
+                                {% for duration in intensity.get_duration %}
+                                    <label for="basic_{{ duration.pk }}"
+                                           class="duration_radio{% if forloop.first %} hour{% endif %}">
+                                        <input type="radio" name="basic" id="basic_{{ duration.pk }}" value=""
+                                               class="radios"{% if forloop.first %} checked{% endif %}
+                                               data-ppl_en="{{ duration.price|floatformat:"-2" }}"
+                                               data-ppl_ru="{{ duration.get_price_ru|floatformat:"-2" }}"
+                                               data-fp_en="{{ duration.full_price|floatformat:"-2" }}"
+                                               data-fp_ru="{{ duration.get_full_price_ru|floatformat:"-2" }}"
+                                               data-int_id="{{ intensity.id }}" data-dur_id="{{ duration.pk }}"/>
+                                        <span class="label">{{ duration.duration }} {% trans 'minutes' %}</span>
+                                    </label>
+                                {% endfor %}
+                                <div class="clear_both"></div>
+                            </div>
+
+                            <div class="price per_lesson">
+                                <p class="label">{% trans 'Per lesson' %}</p>
+
+                                <p class="value" id="price_{{ intensity.pk }}">
+                                    {% if LANGUAGE_CODE == 'en' %}
+                                        <span class="currency">{% trans '$' %}</span>&nbsp;
+                                        {{ intensity.get_first_duration.price|floatformat:"-2" }}
+                                    {% else %}
+                                        {{ intensity.get_first_duration.get_price_ru|floatformat:"-2" }}&nbsp;
+                                        <span class="currency">{% trans '$' %}</span>
+                                    {% endif %}
+                                </p>
+                            </div>
+                            <div class="price per_month">
+                                <p class="label">{% trans 'Per month' %}<span
+                                        class="lessons">({{ intensity.get_lessons }})</span>
+                                </p>
+
+                                <p class="value" id="full_price_{{ intensity.pk }}">
+                                    {% if LANGUAGE_CODE == 'en' %}
+                                        <span class="currency">{% trans '$' %}</span>&nbsp;
+                                        {{ intensity.get_first_duration.full_price|floatformat:"-2" }}
+                                    {% else %}
+                                        {{ intensity.get_first_duration.get_full_price_ru|floatformat:"-2" }}&nbsp;
+                                        <span class="currency">{% trans '$' %}</span>
+                                    {% endif %}
+                                </p>
+                            </div>
+                            <input id="id_form-{{ intensity.pk }}-price" name="form-{{ forloop.counter0 }}-price"
+                                   type="hidden" value="{{ intensity.get_first_duration.full_price }}">
+                            <input id="id_form-{{ intensity.pk }}-intensity_id" name="form-{{ forloop.counter0 }}-intensity_id"
+                                   type="hidden" value="{{ intensity.pk }}">
+                            <input id="id_form-{{ intensity.pk }}-duration_id" name="form-{{ forloop.counter0 }}-duration_id"
+                                   type="hidden" value="{{ intensity.get_first_duration.pk }}">
+                            <input type="submit" name="" id="" value="{% trans 'Select' %}" class="buttons"
+                                   data-id="{{ intensity.pk }}"/>
+                        </form>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="clear_both"></div>
+        </div>
+    </div>
+{% endblock %}

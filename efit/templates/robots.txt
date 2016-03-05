@@ -1,0 +1,11 @@
+{% if "freshlimestudio" in request.get_host %}
+User-Agent: *
+Disallow: /
+Host: {{ request.get_host }}
+{% else %}
+User-Agent: *
+Disallow: /admin/
+Disallow: /static
+Allow: /
+Host: {{ request.get_host }}
+{% endif %}

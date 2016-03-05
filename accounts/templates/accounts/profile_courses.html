@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load i18n staticfiles custom_filters configs_tags meta_tags custom_tags %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <div class="content_block">
+        <div class="content profile_page">
+
+            <div class="profile_links">
+                <ul>
+                    <li>
+                        {% trans 'My courses' %}
+                    </li>
+                    <li>
+                        <a href="{% url 'profile_payments' %}" title="">{% trans 'Payments' %}</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'profile' %}" title="">{% trans 'Profile' %}</a>
+                    </li>
+                </ul>
+            </div>
+
+            <h1 class="caption">{% trans 'My courses' %}</h1>
+
+            <div class="courses">
+                {% for course in courses %}
+                    <div class="course{% if not course.course.no_skills %} current{% endif %}">
+                        {% if not course.course.no_skills %}
+                            <span class="course_label">
+                            {% if course.status == 'course_notpaid' %}
+                                {% trans 'Not paid, need for approval' %}
+                                {% elif course.status == 'course_paid' %}
+                                {% trans 'Paid, need for approval' %}
+                                {% elif course.status == 'course_started' %}
+                                {% trans 'Current' %}
+                                {% elif course.status == 'course_finished' %}
+                                {% trans 'Finished' %}
+                            {% endif %}
+                        </span>
+                        {% endif %}
+                        <div class="title">
+                            {% if course.course.value_type == 'course_front' %}
+                                <a href="{% url 'course_view' course.course.slug %}">{{ course.course.title }}</a>
+                            {% else %}
+                                {{ course.course.title }}
+                            {% endif %}
+                        </div>
+                        {% if course.course.description or course.course.no_skills or course.course.value_type == 'course_personal' %}
+                            <div class="description">
+                                {% if course.course.no_skills %}
+                                    {% trans 'Within 24 hours you will be contacted teacher' %}
+                                    {% elif course.course.description %}
+                                    {{ course.course.description|safe }}
+                                {% elif course.course.value_type == 'course_personal' %}
+                                    {% trans 'Chosen skills' %}: {% for skill in course.course.get_skills_list %}"
+                                    {{ skill.title }}"{% if not forloop.last %},{% else %}.{% endif %}{% endfor %}
+                                {% endif %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    {% empty %}
+                    {% get_config 'no_courses_text' %}
+                {% endfor %}
+            </div>
+
+            <div class="courses_aside">
+                <a href="{% url 'create_personal_course' %}" title=""
+                   class="create_course">{% trans 'Create a new course' %}</a><br/>
+
+                <p><b>{% trans 'OR' %}</b></p>
+                <a href="{% url 'courses_list' %}" title=""
+                   class="start_course">{% trans 'Select from the list of courses' %}</a>
+            </div>
+            <div class="clear_both"></div>
+        </div>
+    </div>
+{% endblock %}

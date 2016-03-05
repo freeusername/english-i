@@ -1,0 +1,124 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-12-21 18:09+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: apps.py:7
+msgid "Pages"
+msgstr "Страницы"
+
+#: forms.py:7
+msgid "name"
+msgstr "имя"
+
+#: forms.py:13
+msgid "Enter Name."
+msgstr "Введите Имя."
+
+#: forms.py:17
+msgid "phone"
+msgstr "телефон"
+
+#: forms.py:23
+msgid "Enter Phone or E-mail, please."
+msgstr "Введите телефон или Email, пожалуйста"
+
+#: forms.py:27
+msgid "email"
+msgstr ""
+
+#: forms.py:34
+msgid "message"
+msgstr "сообщение"
+
+#: forms.py:36
+msgid "Your message"
+msgstr "Ваше сообщение"
+
+#: forms.py:38
+msgid "Enter Message."
+msgstr "Введите сообщение."
+
+#: models.py:7
+msgid "url"
+msgstr ""
+
+#: models.py:7
+msgid "Example: '/about/'. Make sure to have leading and trailing slashes."
+msgstr ""
+"Например: '/about/'. Удостоверьтесь, что введены начальные и конечные косые "
+"черты."
+
+#: models.py:9
+msgid "title"
+msgstr "название"
+
+#: models.py:10
+msgid "show title?"
+msgstr "показывать название?"
+
+#: models.py:11
+msgid "enabled?"
+msgstr "включена?"
+
+#: models.py:12
+msgid "content"
+msgstr "содержание"
+
+#: models.py:13
+msgid "template"
+msgstr "шаблон"
+
+#: models.py:13
+msgid "Example: about, if not filled will use the default template."
+msgstr ""
+"Например: about, если не заполено будет использоваться шаблон по умолчанию"
+
+#: models.py:25
+msgid "page"
+msgstr "страницу"
+
+#: models.py:26
+msgid "pages"
+msgstr "страницы"
+
+#: templates/pages/home.html:77
+msgid "Endorsements"
+msgstr "Отзывы клиентов"
+
+#: templates/pages/mail/email.html:9 templates/pages/mail/email_subject.txt:1
+#, python-format
+msgid "Message from %(site_name)s."
+msgstr "Сообщение от %(site_name)s."
+
+#: templates/pages/mail/email.html:14 templates/pages/mail/email.txt:2
+msgid "Name"
+msgstr "Имя"
+
+#: templates/pages/mail/email.html:16 templates/pages/mail/email.txt:3
+msgid "Phone"
+msgstr "телефон"
+
+#: templates/pages/mail/email.html:19 templates/pages/mail/email.txt:4
+msgid "Email"
+msgstr ""
+
+#: templates/pages/mail/email.html:21 templates/pages/mail/email.txt:5
+msgid "Message"
+msgstr "сообщение"

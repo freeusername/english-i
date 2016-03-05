@@ -1,0 +1,26 @@
+/* overview styles */
+.overview_page {
+  width: 918px !important;
+  padding-top: 25px;
+}
+.overview_page .overview_block {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 18px;
+  line-height: 1.2em;
+}
+.overview_page .overview_block .image {
+  display: block;
+  width: 348px;
+}
+.overview_page .overview_block .text {
+  width: 536px;
+}
+.overview_page .overview_block .caption {
+  padding-top: 23px;
+  padding-bottom: 54px;
+  font-size: 30px;
+  line-height: 1.2em;
+  font-weight: bold;
+  color: #039be5;
+}

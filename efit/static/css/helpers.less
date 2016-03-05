@@ -1,0 +1,37 @@
+@import (reference) "colors.less";
+
+/* helpers */
+.grayscale(@value) {
+	filter: grayscale(@value);
+	-webkit-filter: grayscale(@value);
+	-moz-filter: grayscale(@value);
+	-o-filter: grayscale(@value);
+	-ms-filter: grayscale(@value);
+}
+
+.gradient(@color_1, @color_2) {
+	background-image: linear-gradient(bottom, @color_2 19%, @color_1 93%);
+	background-image: -o-linear-gradient(bottom, @color_2 19%, @color_1 93%);
+	background-image: -moz-linear-gradient(bottom, @color_2 19%, @color_1 93%);
+	background-image: -webkit-linear-gradient(bottom, @color_2 19%, @color_1 93%);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.19 @color_2), color-stop(0.93, @color_1));
+	background-image: -ms-linear-gradient(bottom, @color_2 19%, @color_1 93%);
+	-pie-background: linear-gradient(@color_1, @color_2);
+}
+
+.shadow(@x, @y, @radius, @color) {
+	-webkit-box-shadow: @x @y @radius @color;
+	-moz-box-shadow: @x @y @radius @color;
+	box-shadow: @x @y @radius @color;
+}
+
+.border_radius(@top_left, @top_right, @bottom_right, @bottom_left) {
+	-webkit-border-radius: @top_left @top_right @bottom_right @bottom_left;
+	-moz-border-radius: @top_left @top_right @bottom_right @bottom_left;
+	border-radius: @top_left @top_right @bottom_right @bottom_left;
+}
+
+.font(@size, @line_height) {
+	font-size: @size;
+	line-height: @line_height;
+}

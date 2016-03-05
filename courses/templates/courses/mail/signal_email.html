@@ -1,0 +1,21 @@
+{% load i18n %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        {% with site_name=site.name %}
+            {% blocktrans %}Site user {{ site_name }} need professional help.{% endblocktrans %}
+        {% endwith %}
+    </title>
+</head>
+<body>
+
+<p>{% trans 'Full name' %}: {{ user.full_name }}</p>
+{% if user.phone %}<p>{% trans 'Phone' %}: {{ user.phone }}</p>{% endif %}
+{% if user.email %}<p>{% trans 'Email' %}: {{ user.email }}</p>{% endif %}
+<p>{% trans 'Profile' %}: <a href="http://{{ site.domain }}/admin/accounts/user/{{ user.id }}/">http://{{ site.domain }}/admin/accounts/user/{{ user.id }}/</a></p>
+<p>{% trans 'Course' %}: <a href="http://{{ site.domain }}/admin/courses/course/{{ course.id }}/">http://{{ site.domain }}/admin/courses/course/{{ course.id }}/</a></p>
+</body>
+</html>

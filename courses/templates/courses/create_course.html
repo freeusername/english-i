@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load i18n staticfiles custom_filters configs_tags meta_tags custom_tags %}
+
+{% block meta_tags %}
+    {% include_meta_tags %}
+{% endblock %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}"/>
+{% endblock %}
+
+{% block js %}
+    {{ block.super }}
+    <script src="{% static 'js/jquery.ezmark.js' %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.own_course_page .checkboxes').ezMark();
+        });
+        $(document).ready(function () {
+            $('#id_no_skills').click(function () {
+                if ($("#id_no_skills").prop("checked")) {
+                    $('.skills_list').attr("disabled", true);
+                    $('.skills_list').attr("checked", false);
+                    $('.ez-checked').removeClass('ez-checked');
+                    $('#id_submit').attr("disabled", false).css("background", "#039BE5 none");
+                } else {
+                    $('.skills_list').attr("disabled", false);
+                    $('#id_submit').attr("disabled", true).css("background", "#9fc4d6 none");
+                }
+            });
+            $('.skills_list').click(function () {
+                var count = $(".skills_list:checked");
+                if (count.length >= 2) {
+                    $('#id_submit').attr("disabled", false).css("background", "#039BE5 none");
+{#                    $('#id_submit').css();#}
+                } else {
+                    $('#id_submit').attr("disabled", true).css("background", "#9fc4d6 none");
+                }
+            });
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="content_block">
+        <div class="content own_course_page">
+
+            <h1 class="page_title">{{ page.title }}</h1>
+
+            <div class="own_course">
+                {{ page.content|safe }}
+
+                <form name="" id="" action="{{ app_path }}" method="POST" id="checkbox_skills">
+                    {% csrf_token %}
+                    <div class="checkboxes_list">
+                        <label for="{{ form.no_skills.auto_id }}" class="checkbox_block for_professionals" style="margin-bottom: 30px">
+                            <input class="checkboxes ez-hide" id="id_no_skills" name="no_skills" type="checkbox">
+                            <span class="label">{{ form.no_skills.label }}</span>
+                        </label>
+                        {% for skill in skills %}
+                            <ul class="{% cycle 'left_list' 'right_list' %}">
+                                {% for item in skill %}
+                                    <li>
+                                        <label for="id_skill_{{ item.pk }}" class="checkbox_block">
+                                            <input type="checkbox" name="skills" id="id_skill_{{ item.pk }}"
+                                                   value="{{ item.pk }}" class="checkboxes skills_list"/>
+                                            {% if item.show %}
+                                                <a href="{% url 'skill_view' item.pk %}"><span class="label">{{ item.title }}</span></a>
+                                            {% else %}
+                                                <span class="label">{{ item.title }}</span>
+                                            {% endif %}
+                                        </label>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% endfor %}
+
+                        <div class="clear_both"></div>
+                    </div>
+
+                    <center><input type="submit" name="" id="id_submit" value="{% trans 'Create a new course' %}" class="buttons" disabled="disabled" style="background: #9fc4d6 none;"/></center>
+                </form>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

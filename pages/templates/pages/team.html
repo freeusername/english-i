@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load i18n staticfiles custom_filters configs_tags meta_tags custom_tags %}
+
+{% block meta_tags %}
+    {% include_meta_tags page %}
+{% endblock %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/team.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <div class="content_block">
+        <div class="content team_page">
+
+            <h1 class="page_title">{{ page.title }}</h1>
+
+            <div class="team_block">
+                {{ page.content|safe }}
+                {% for teacher in teachers %}
+                    <div class="teacher">
+                        <img src="{{ teacher.image_thumb.url }}" alt="" title="" class="photo"/>
+
+                        <div class="name">
+                            {{ teacher.full_name }}
+                        </div>
+                        <div class="description">
+                            {{ teacher.description|safe }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

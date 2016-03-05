@@ -1,0 +1,163 @@
+{% load i18n staticfiles custom_filters configs_tags meta_tags custom_tags %}
+<!DOCTYPE HTML>
+<HTML>
+<Head>
+    {% block meta_tags %}
+        {% include_meta_tags %}
+    {% endblock %}
+
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'fonts/geomanist_font.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/base.css' %}"/>
+    {% endblock %}
+
+    {% block js %}
+        <script src="{% static 'js/jquery-1.10.2.js' %}"></script>
+        <script src="{% static 'js/jquery-migrate-1.2.1.js' %}"></script>
+        <script src="{% static 'js/jquery.placeholder.js' %}"></script>
+        <script src="{% static 'js/application.js' %}"></script>
+        <script src="{% static 'js/less.min.js' %}"></script>
+        <script src="{% static 'js/jquery.form.js' %}"></script>
+    {% endblock %}
+
+    {% block head_script %}
+        {% get_config 'head_script' %}
+    {% endblock %}
+
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon"/>
+</Head>
+
+<body>
+{% block body_script %}
+    {% get_config 'body_script' %}
+{% endblock %}
+
+{% block ga_code %}
+    {% get_config 'google_analytics' %}
+{% endblock %}
+<div class="wrapper">
+    <header class="header">
+        {% block header %}
+            <div class="central_block">
+                {% get_config 'logo_link' as logo_link %}
+                {% if logo_link %}
+                    <div class="logo">
+                        <a href="{% url 'home' %}" title="">
+                            <img src="{{ logo_link }}" alt="english i" title=""/>
+                        </a>
+                    </div>
+                {% endif %}
+                <div class="header_links">
+                    <ul>
+                        <li>
+                            <div style="display: none;">
+                                <form name="setLangRu" action="{% url 'set_language' %}"
+                                      method="POST">{% csrf_token %}
+                                    <input type="hidden" name="language" value="ru"/>
+                                    <input type="hidden" name="next" value="{% change_lang request 'ru' %}"/>
+                                </form>
+                                <form name="setLangEn" action="{% url 'set_language' %}"
+                                      method="POST">{% csrf_token %}
+                                    <input type="hidden" name="language" value="en"/>
+                                    <input type="hidden" name="next" value="{% change_lang request 'en' %}"/>
+                                </form>
+                            </div>
+                            {% ifequal LANGUAGE_CODE 'en' %}
+                                <a href="javascript:void(0);" onclick="document.setLangRu.submit();return false;"
+                                   title=""
+                                   {% ifequal LANGUAGE_CODE 'ru' %}class="current"{% endifequal %}>RU</a>
+                                {% else %}
+                                <a href="javascript:void(0);" onclick="document.setLangEn.submit();return false;"
+                                   title=""
+                                   {% ifequal LANGUAGE_CODE 'en' %}class="current"{% endifequal %}>EN</a>
+                            {% endifequal %}
+                        </li>
+                        {% if not user.is_authenticated %}
+                            <li>
+                                <a href="{% url 'login' %}" title="">{% trans 'LOG IN' %}</a>
+                            </li>
+                        {% else %}
+                            <li class="user_name{% is_curr_link request link='/profile/' format='^{}' css_class=' current' %}">
+                                <a href="{% url 'profile' %}" title="">
+                                    {% if request.user.avatar %}
+                                        <img src="{{ request.user.avatar_mini.url }}" class="avatar">
+                                    {% else %}
+                                        <span class="no_avatar"></span>
+                                    {% endif %}
+                                    {{ request.user.first_name|upper }}
+                                </a><br/>
+                                <a href="{% url 'logout' %}" title="" class="logout">{% trans 'Log Out' %}</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                    <div class="clear_both"></div>
+                </div>
+
+                <nav class="navigation">
+                    <ul>
+                        {% for item in items %}
+                            <li{% is_curr_link request link=item.link format=item.search_template css_class=' class="current"' %}>
+                                <a href="{% lang_prefix_for_menu %}{{ item.link }}" title="">{{ item.title }}</a>
+                                {% is_curr_link request link=item.link format=item.search_template css_class='<span></span>' %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    <div class="clear_both"></div>
+                </nav>
+                <div class="clear_both"></div>
+
+            </div>
+        {% endblock %}
+    </header>
+    {% block content %}
+    {% endblock %}
+</div>
+<footer class="footer">
+    <div class="central_block">
+
+        <div class="footer_row">
+            <div class="contact_info">
+                <p>{% get_config 'contacts_email' as contacts_email %}{% if contacts_email %}
+                    {{ contacts_email|safe }}{% endif %}<br/>
+                    {% get_config 'contacts_phone' as contacts_phone %}{% if contacts_phone %}
+                        {{ contacts_phone|safe }}{% endif %}</p>
+            </div>
+
+            <div class="footer_links">
+                <a href="/terms-and-conditions/" title="">{% trans 'Terms and conditions' %}</a>
+            </div>
+
+            <div class="socials">
+                {% get_config 'fb_link' as fb_link %}
+                {% if fb_link %}
+                    <a href="{{ fb_link }}" title="" target="_blank" class="fb_icon"></a>
+                {% endif %}
+                {% get_config 'twitter_link' as twitter_link %}
+                {% if twitter_link %}
+                    <a href="{{ twitter_link }}" title="" target="_blank" class="twitter_icon"></a>
+                {% endif %}
+                {% get_config 'google_link' as google_link %}
+                {% if google_link %}
+                    <a href="{{ google_link }}" title="" target="_blank" class="google_icon"></a>
+                {% endif %}
+                {% get_config 'youtube_link' as youtube_link %}
+                {% if youtube_link %}
+                    <a href="{{ youtube_link }}" title="" target="_blank" class="youtube_icon"></a>
+                {% endif %}
+                {% get_config 'vk_link' as vk_link %}
+                {% if vk_link %}
+                    <a href="{{ vk_link }}" title="" target="_blank" class="vk_icon"></a>
+                {% endif %}
+                {% get_config 'instagram_link' as instagram_link %}
+                {% if instagram_link %}
+                    <a href="{{ instagram_link }}" title="" target="_blank" class="instagram_icon"></a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</footer>
+{% block bottom_js %}
+{% endblock %}
+</body>
+</html>

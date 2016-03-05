@@ -1,0 +1,146 @@
+.wrapper {
+  background: #F6F6F6 none;
+}
+/* login styles */
+.login_page {
+  width: 400px !important;
+  padding-bottom: 50px;
+}
+.login_page .page_title {
+  padding: 110px 0px 0px 0px;
+  font-size: 30px;
+  line-height: 1.2em;
+  font-weight: normal;
+  text-align: center;
+}
+.login_page .form_block {
+  padding-top: 40px;
+}
+.login_page .labels {
+  display: block;
+  padding-bottom: 5px;
+  font-size: 15px;
+  line-height: 1.2em;
+}
+.login_page .inputs {
+  overflow: hidden;
+  outline: none;
+  width: 378px;
+  height: 41px;
+  margin: 0px auto 19px auto;
+  padding: 0px 10px;
+  font-size: 20px;
+  line-height: 1.4em;
+  font-family: 'Open Sans Condensed', Arial, Verdana, sans-serif;
+  letter-spacing: 0.07px;
+  font-weight: normal;
+  color: #636363;
+  text-align: left;
+  border: 1px solid #949494;
+  background: #FFFFFF none;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+}
+.login_page .error_notice {
+  color: #f24841;
+}
+.login_page .bottom_row {
+  padding-top: 21px;
+}
+.login_page .buttons {
+  width: 180px;
+  height: 56px;
+}
+.login_page .remember_me {
+  float: right;
+  position: relative;
+  width: 200px;
+  margin-top: 17px;
+  font-size: 19px;
+  line-height: 1.2em;
+  text-align: right;
+}
+.login_page .forgot_password {
+  padding-top: 48px;
+}
+/* registration page */
+.registration_page {
+  width: 400px !important;
+  padding-bottom: 50px;
+}
+.registration_page .page_title {
+  padding: 110px 0px 0px 0px;
+  font-size: 30px;
+  line-height: 1.2em;
+  font-weight: normal;
+  text-align: center;
+}
+.registration_page .form_block {
+  padding-top: 40px;
+}
+.registration_page .labels {
+  display: block;
+  padding-bottom: 5px;
+  font-size: 15px;
+  line-height: 1.2em;
+}
+.registration_page .inputs {
+  overflow: hidden;
+  outline: none;
+  width: 378px;
+  height: 41px;
+  margin: 0px auto 19px auto;
+  padding: 0px 10px;
+  font-size: 20px;
+  line-height: 1.4em;
+  font-family: 'Open Sans Condensed', Arial, Verdana, sans-serif;
+  letter-spacing: 0.07px;
+  font-weight: normal;
+  color: #636363;
+  text-align: left;
+  border: 1px solid #949494;
+  background: #FFFFFF none;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+}
+.registration_page .error_notice {
+  color: #f24841;
+}
+.registration_page .bottom_row {
+  padding-top: 21px;
+}
+.registration_page .buttons {
+  width: 180px;
+  height: 56px;
+}
+.registration_page .remember_me {
+  float: right;
+  position: relative;
+  width: 200px;
+  margin-top: 17px;
+  font-size: 19px;
+  line-height: 1.2em;
+  text-align: right;
+}
+.registration_page .forgot_password {
+  padding-top: 48px;
+}
+.registration_page .notice_block {
+  padding-top: 14px;
+  font-size: 15px;
+  line-height: 1.7em;
+  color: #898989;
+}
+.registration_page .form_block {
+  padding-top: 52px;
+}
+.registration_page .buttons {
+  width: auto;
+  min-width: 180px;
+  padding: 0px 20px;
+}
+.registration_page .bottom_links {
+  padding-top: 48px;
+}

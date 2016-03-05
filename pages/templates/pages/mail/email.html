@@ -1,0 +1,23 @@
+{% load i18n %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        {% with site_name=site.name %}
+            {% blocktrans %}Message from {{ site_name }}.{% endblocktrans %}
+        {% endwith %}
+    </title>
+</head>
+<body>
+<p>{% trans 'Name' %}: {{ name }}</p>
+{% if phone %}
+<p>{% trans 'Phone' %}: {{ phone }}</p>
+{% endif %}
+{% if email %}
+<p>{% trans 'Email' %}: {{ email }}</p>
+{% endif %}
+<p>{% trans 'Message' %}: {{ message }}</p>
+</body>
+</html>

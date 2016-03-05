@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load i18n staticfiles custom_filters configs_tags meta_tags custom_tags %}
+
+{% block meta_tags %}
+    {% include_meta_tags page %}
+{% endblock %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/courses.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <div class="content_block">
+        <div class="content courses_page">
+
+            <h1 class="page_title">{{ page.title }}</h1>
+
+            <div class="featured_courses">
+                {% for cf in courses_featured %}
+                    <div class="course">
+                        <span class="featured_label"></span>
+
+                        <p class="title">
+                            <a href="{% url 'course_view' cf.slug %}" title="">{{ cf.title }}</a>
+                        </p>
+
+                        <p class="description">{{ cf.short_description|safe }}</p>
+
+                        <div class="info_block">
+                            <p class="info">
+                                <span class="lessons">{{ cf.get_lessons }}</span>
+                                {% if course.duration %}<span class="duration">{{ cf.get_duration }}</span>{% endif %}
+                            </p>
+                            {% if cf.preview %}
+                                <p class="image">
+                                    <a href="{% url 'course_view' cf.slug %}" title=""><img
+                                            src="{{ cf.preview_main.url }}" alt="" title=""/></a>
+                                </p>
+                            {% endif %}
+                        </div>
+                        <div class="bottom_row">
+                            <a href="{% url 'course_view' cf.slug %}" title="" class="more"
+                               style="padding: 17px 20px 0px 20px">{% trans 'Know more' %}</a>
+                            {% if LANGUAGE_CODE == 'en' %}
+                                <p class="price">{{ cf.price|floatformat:"-2" }}&nbsp;<span
+                                        class="currency">{% trans '$' %}</span></p>
+                            {% else %}
+                                <p class="price">{{ cf.get_price_ru|floatformat:"-2" }}&nbsp;<span
+                                        class="currency">{% trans '$' %}</span></p>
+                            {% endif %}
+                            <div class="clear_both"></div>
+                        </div>
+                    </div>
+                {% endfor %}
+                <div class="clear_both"></div>
+            </div>
+
+            <div class="text_block">
+                {{ page.content|safe }}
+                <a href="{% url 'create_personal_course' %}" title=""
+                   class="create_course">{% trans 'Create your own course' %}</a>
+            </div>
+
+            {% if courses_other %}
+                <section class="other_courses">
+                    <div class="caption">{% trans 'Other courses' %}:</div>
+
+                    <div class="courses">
+                        {% for co in courses_other %}
+                            <div class="course">
+                                <a href="{% url 'course_view' co.slug %}" title="" class="title">{{ co.title }}</a>
+
+                                <div class="description">
+                                    {{ co.short_description|safe }}
+                                </div>
+                                <div class="bottom_row">
+                                {% if LANGUAGE_CODE == 'en' %}
+                                    <p class="price" style="display: block; float:left; margin-top: 5px; ">{{ co.price|floatformat:"-2" }}&nbsp;<span
+                                            class="currency">{% trans '$' %}</span></p>
+                                {% else %}
+                                    <p class="price">{{ co.get_price_ru|floatformat:"-2" }}&nbsp;<span
+                                            class="currency">{% trans '$' %}</span></p>
+                                {% endif %}
+                                    <a href="{% url 'course_view' co.slug %}" title=""
+                                       class="more">{% trans 'Know more' %}</a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </section>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

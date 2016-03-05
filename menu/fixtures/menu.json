@@ -1,0 +1,44 @@
+[
+{
+    "fields": {
+        "title": "EXPLORE",
+        "search_template": "^{}",
+        "title_en": "EXPLORE",
+        "updated_at": "2015-12-23T08:54:39.854Z",
+        "link": "/explore/",
+        "title_ru": "\u0423\u0417\u041d\u0410\u0422\u042c",
+        "position": 1,
+        "created_at": "2015-12-21T17:47:03.660Z"
+    },
+    "model": "menu.item",
+    "pk": 1
+},
+{
+    "fields": {
+        "title": "COURSES",
+        "search_template": "^{}",
+        "title_en": "COURSES",
+        "updated_at": "2015-12-23T08:54:57.103Z",
+        "link": "/courses/",
+        "title_ru": "\u041a\u0423\u0420\u0421\u042b",
+        "position": 2,
+        "created_at": "2015-12-21T17:47:19.378Z"
+    },
+    "model": "menu.item",
+    "pk": 2
+},
+{
+    "fields": {
+        "title": "TEAM",
+        "search_template": "^{}",
+        "title_en": "TEAM",
+        "updated_at": "2015-12-23T08:55:07.358Z",
+        "link": "/team/",
+        "title_ru": "\u041a\u041e\u041c\u0410\u041d\u0414\u0410",
+        "position": 3,
+        "created_at": "2015-12-22T14:21:44.172Z"
+    },
+    "model": "menu.item",
+    "pk": 3
+}
+]

@@ -1,0 +1,119 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-12-21 18:09+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: apps.py:7
+msgid "Pages"
+msgstr ""
+
+#: forms.py:7
+msgid "name"
+msgstr ""
+
+#: forms.py:13
+msgid "Enter Name."
+msgstr ""
+
+#: forms.py:17
+msgid "phone"
+msgstr ""
+
+#: forms.py:23
+msgid "Enter Phone or E-mail, please."
+msgstr ""
+
+#: forms.py:27
+msgid "email"
+msgstr ""
+
+#: forms.py:34
+msgid "message"
+msgstr ""
+
+#: forms.py:36
+msgid "Your message"
+msgstr ""
+
+#: forms.py:38
+msgid "Enter Message."
+msgstr ""
+
+#: models.py:7
+msgid "url"
+msgstr ""
+
+#: models.py:7
+msgid "Example: '/about/'. Make sure to have leading and trailing slashes."
+msgstr ""
+
+#: models.py:9
+msgid "title"
+msgstr ""
+
+#: models.py:10
+msgid "show title?"
+msgstr ""
+
+#: models.py:11
+msgid "enabled?"
+msgstr ""
+
+#: models.py:12
+msgid "content"
+msgstr ""
+
+#: models.py:13
+msgid "template"
+msgstr ""
+
+#: models.py:13
+msgid "Example: about, if not filled will use the default template."
+msgstr ""
+
+#: models.py:25
+msgid "page"
+msgstr ""
+
+#: models.py:26
+msgid "pages"
+msgstr ""
+
+#: templates/pages/home.html:77
+msgid "Endorsements"
+msgstr ""
+
+#: templates/pages/mail/email.html:9 templates/pages/mail/email_subject.txt:1
+#, python-format
+msgid "Message from %(site_name)s."
+msgstr ""
+
+#: templates/pages/mail/email.html:14 templates/pages/mail/email.txt:2
+msgid "Name"
+msgstr ""
+
+#: templates/pages/mail/email.html:16 templates/pages/mail/email.txt:3
+msgid "Phone"
+msgstr ""
+
+#: templates/pages/mail/email.html:19 templates/pages/mail/email.txt:4
+msgid "Email"
+msgstr ""
+
+#: templates/pages/mail/email.html:21 templates/pages/mail/email.txt:5
+msgid "Message"
+msgstr ""

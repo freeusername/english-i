@@ -1,0 +1,39 @@
+/* team styles */
+.team_page {
+  width: 882px !important;
+}
+.team_page .team_block {
+  margin: 0px -15px;
+  text-align: left;
+}
+.team_page .team_block .teacher {
+  display: inline-table;
+  width: 274px;
+  margin: 0px 13px 30px 13px;
+  text-align: left;
+  vertical-align: top;
+}
+.team_page .team_block .photo {
+  width: 274px;
+  height: 292px;
+  margin-bottom: 25px;
+}
+.team_page .team_block .photo img {
+  display: block;
+  width: inherit;
+  height: inherit;
+}
+.team_page .team_block .name {
+  padding-bottom: 20px;
+  font-size: 24px;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+.team_page .team_block .name a {
+  text-decoration: none;
+  color: #000000;
+}
+.team_page .team_block .description {
+  font-size: 18px;
+  line-height: 1.4em;
+}

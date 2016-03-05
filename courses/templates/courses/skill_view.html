@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load i18n staticfiles custom_filters configs_tags meta_tags custom_tags %}
+
+{% block meta_tags %}
+    {% include_meta_tags skill %}
+{% endblock %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/courses.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <div class="content_block">
+        <div class="content course_page">
+            {{ skill.description|safe }}
+        </div>
+    </div>
+{% endblock %}

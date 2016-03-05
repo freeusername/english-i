@@ -1,0 +1,290 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-29 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: apps.py:7
+msgid "Courses"
+msgstr ""
+
+#: models.py:14
+msgid "Course front"
+msgstr ""
+
+#: models.py:15
+msgid "Course personal"
+msgstr ""
+
+#: models.py:20 models.py:43 models.py:133
+msgid "position"
+msgstr ""
+
+#: models.py:21
+msgid "show link?"
+msgstr ""
+
+#: models.py:22 models.py:46 models.py:135
+msgid "title"
+msgstr ""
+
+#: models.py:23 models.py:51 models.py:136
+msgid "description"
+msgstr ""
+
+#: models.py:24 models.py:137
+msgid "lessons"
+msgstr ""
+
+#: models.py:26 models.py:65 models.py:139 models.py:174
+msgid "created at"
+msgstr ""
+
+#: models.py:27 models.py:66 models.py:140 models.py:175
+msgid "updated at"
+msgstr ""
+
+#: models.py:34
+msgid "skill"
+msgstr ""
+
+#: models.py:35
+msgid "skills"
+msgstr ""
+
+#: models.py:39
+msgid "type"
+msgstr ""
+
+#: models.py:44
+msgid "featured"
+msgstr ""
+
+#: models.py:47
+msgid "URL-path"
+msgstr ""
+
+#: models.py:48
+msgid ""
+"If you do not specify this field, it will be generated <b>automatically</b>."
+msgstr ""
+
+#: models.py:50
+msgid "short description"
+msgstr ""
+
+#: models.py:52
+msgid "number of lessons"
+msgstr ""
+
+#: models.py:53
+msgid "course duration"
+msgstr ""
+
+#: models.py:54
+msgid "pros and cons of the course"
+msgstr ""
+
+#: models.py:55 models.py:170
+msgid "price"
+msgstr ""
+
+#: models.py:56
+msgid "preview"
+msgstr ""
+
+#: models.py:57 models.py:124
+msgid "image"
+msgstr ""
+
+#: models.py:63
+msgid "leave it for professionals"
+msgstr ""
+
+#: models.py:84 models.py:149 views.py:111
+msgctxt "1"
+msgid "lesson"
+msgstr ""
+
+#: models.py:85 models.py:149 views.py:111
+msgctxt "2-4"
+msgid "lessons"
+msgstr ""
+
+#: models.py:86 models.py:149 views.py:111
+msgctxt "5+"
+msgid "lessons"
+msgstr ""
+
+#: models.py:90
+msgctxt "1"
+msgid "month"
+msgstr ""
+
+#: models.py:91
+msgctxt "2-4"
+msgid "months"
+msgstr ""
+
+#: models.py:92
+msgctxt "5+"
+msgid "months"
+msgstr ""
+
+#: models.py:106
+#, python-format
+msgid "Custom course %s"
+msgstr ""
+
+#: models.py:128
+msgid "course"
+msgstr ""
+
+#: models.py:129
+msgid "courses"
+msgstr ""
+
+#: models.py:134
+msgid "recommended?"
+msgstr ""
+
+#: models.py:163
+msgid "intensity"
+msgstr ""
+
+#: models.py:164
+msgid "intensities"
+msgstr ""
+
+#: models.py:169 models.py:196
+msgid "duration"
+msgstr ""
+
+#: models.py:171
+msgid "full price"
+msgstr ""
+
+#: models.py:178
+#, python-format
+msgid "Duration %(duration)s minutes to the intensity of %(intensity)s"
+msgstr ""
+
+#: models.py:197
+msgid "durations"
+msgstr ""
+
+#: templates/courses/course_price.html:33
+#: templates/courses/course_price.html:34
+#: templates/courses/course_price.html:36
+#: templates/courses/course_price.html:37
+#: templates/courses/course_price.html:109
+#: templates/courses/course_price.html:113
+#: templates/courses/course_price.html:124
+#: templates/courses/course_price.html:128
+#: templates/courses/courses_list.html:47
+#: templates/courses/courses_list.html:50
+#: templates/courses/courses_list.html:80
+#: templates/courses/courses_list.html:83
+msgid "$"
+msgstr ""
+
+#: templates/courses/course_price.html:57
+msgid "Prices"
+msgstr ""
+
+#: templates/courses/course_price.html:64
+msgid "Chosen skills"
+msgstr ""
+
+#: templates/courses/course_price.html:70
+msgid "Total duration"
+msgstr ""
+
+#: templates/courses/course_price.html:87
+msgid "Duration"
+msgstr ""
+
+#: templates/courses/course_price.html:98
+msgid "minutes"
+msgstr ""
+
+#: templates/courses/course_price.html:105
+msgid "Per lesson"
+msgstr ""
+
+#: templates/courses/course_price.html:118
+msgid "Per month"
+msgstr ""
+
+#: templates/courses/course_price.html:138
+msgid "Select"
+msgstr ""
+
+#: templates/courses/course_view.html:41
+msgid "Course program"
+msgstr ""
+
+#: templates/courses/course_view.html:48
+msgid "Start a course"
+msgstr ""
+
+#: templates/courses/courses_list.html:44
+#: templates/courses/courses_list.html:86
+msgid "Know more"
+msgstr ""
+
+#: templates/courses/courses_list.html:62
+msgid "Create your own course"
+msgstr ""
+
+#: templates/courses/courses_list.html:67
+msgid "Other courses"
+msgstr ""
+
+#: templates/courses/create_course.html:82
+msgid "Create a new course"
+msgstr ""
+
+#: templates/courses/mail/signal_email.html:9
+#: templates/courses/mail/signal_email_subject.txt:1
+#, python-format
+msgid "Site user %(site_name)s need professional help."
+msgstr ""
+
+#: templates/courses/mail/signal_email.html:15
+#: templates/courses/mail/signal_email.txt:2
+msgid "Full name"
+msgstr ""
+
+#: templates/courses/mail/signal_email.html:16
+#: templates/courses/mail/signal_email.txt:3
+msgid "Phone"
+msgstr ""
+
+#: templates/courses/mail/signal_email.html:17
+#: templates/courses/mail/signal_email.txt:4
+msgid "Email"
+msgstr ""
+
+#: templates/courses/mail/signal_email.html:18
+#: templates/courses/mail/signal_email.txt:5
+msgid "Profile"
+msgstr ""
+
+#: templates/courses/mail/signal_email.html:19
+#: templates/courses/mail/signal_email.txt:6
+msgid "Course"
+msgstr ""

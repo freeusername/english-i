@@ -1,0 +1,98 @@
+/* helpers */
+/* slider styles */
+.slider_block {
+  position: relative;
+  width: 100%;
+  height: 517px;
+  min-height: 517px;
+}
+.slider_block .slides {
+  position: relative;
+  height: 517px;
+  min-height: 517px;
+}
+.slider_block .slide {
+  width: 100%;
+  height: 517px;
+  min-height: 517px;
+  background-position: 50% 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slider_block .slidesjs-navigation {
+  display: none;
+}
+.slider_block .slidesjs-pagination {
+  list-style: none;
+  position: absolute;
+  z-index: 12;
+  bottom: 27px;
+  left: 50%;
+  width: 920px;
+  margin-left: -460px;
+  padding: 0px;
+  font-size: 0px;
+  line-height: 0px;
+  text-align: center;
+}
+.slider_block .slidesjs-pagination li {
+  display: inline-block;
+  margin: 0px 3px;
+  padding: 0px;
+}
+.slider_block .slidesjs-pagination a {
+  display: inline-block;
+  overflow: hidden;
+  width: 11px;
+  height: 11px;
+  background: url(../img/slider_pagination.png) 0px 0px no-repeat;
+}
+.slider_block .slidesjs-pagination .active {
+  background-position: -12px 0px;
+}
+.slider_block .shaded_block {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url(../img/transparent_bg.png) 0px 0px repeat;
+}
+.slider_block .caption {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  top: 50%;
+  width: 920px;
+  height: 312px;
+  margin: -175px auto 0px auto;
+  font-family: 'Open Sans', Arial, Verdana, sans-serif;
+  color: #ffffff;
+}
+.slider_block .caption .top_text {
+  display: table-cell;
+  width: 920px;
+  padding-bottom: 0px;
+  text-align: center;
+  vertical-align: middle;
+}
+.slider_block .caption .top_text p {
+  line-height: 1.2em;
+}
+.slider_block .caption .bottom_text {
+  width: 920px;
+  height: 95px;
+  text-align: center;
+}
+.slider_block .caption .button {
+  display: inline-block;
+  height: 29px;
+  margin-top: 10px;
+  padding: 20px 27px 0px 27px;
+  font-size: 19px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  background: #009CE8 none;
+}

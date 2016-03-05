@@ -1,0 +1,120 @@
+/* prices styles */
+.prices_page {
+  width: 753px !important;
+  padding-bottom: 50px;
+}
+.prices_page .page_title {
+  padding-bottom: 30px;
+}
+.prices_page .text_block {
+  padding-bottom: 55px;
+  font-size: 18px;
+  line-height: 1.5em;
+}
+.prices_page .price_block {
+  float: left;
+  position: relative;
+  width: 217px;
+  margin-right: 25px;
+  margin-bottom: 30px;
+  padding-right: 25px;
+  font-size: 16px;
+  line-height: 1.2em;
+  border-right: 1px solid #C2C2C2;
+}
+.prices_page .price_block .recomended_label {
+  position: absolute;
+  z-index: 0;
+  top: -2px;
+  right: -3px;
+  width: 106px;
+  height: 106px;
+  background: url(../img/recomended_label.png) 0px 0px no-repeat;
+}
+.prices_page .price_block form {
+  position: relative;
+  z-index: 1;
+}
+.prices_page .price_block .title {
+  width: 150px;
+  padding-bottom: 7px;
+  font-size: 21px;
+  line-height: 1.2em;
+  font-weight: bold;
+  color: #039be5;
+}
+.prices_page .price_block .title a {
+  text-decoration: none;
+}
+.prices_page .price_block .short_info {
+  width: 180px;
+  padding-bottom: 35px;
+  font-style: italic;
+}
+.prices_page .price_block .duration {
+  padding-bottom: 35px;
+  font-size: 14px;
+  line-height: 1.2em;
+}
+.prices_page .price_block .duration .caption {
+  padding-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+.prices_page .price_block .duration .duration_radio {
+  display: block;
+  float: left;
+  position: relative;
+  padding-left: 21px;
+}
+.prices_page .price_block .duration .hour {
+  margin-right: 15px;
+}
+.prices_page .price_block .price {
+  padding-bottom: 25px;
+}
+.prices_page .price_block .price .label,
+.prices_page .price_block .price .value {
+  display: table-cell;
+  padding-bottom: 0px;
+  font-weight: bold;
+  text-align: left;
+  vertical-align: middle;
+}
+.prices_page .price_block .price .label {
+  width: 123px;
+}
+.prices_page .price_block .price .label .lessons {
+  display: block;
+  padding-top: 5px;
+  font-size: 14px;
+  line-height: 1.2em;
+  font-weight: normal;
+}
+.prices_page .price_block .per_lesson .value .currency {
+  font-size: 16px;
+  line-height: 1.2em;
+  color: #000000;
+}
+.prices_page .price_block .per_month .value {
+  font-size: 38px;
+  line-height: 1.2em;
+  color: #039be5;
+}
+.prices_page .price_block .per_month .value .currency {
+  font-size: 23px;
+  line-height: 1.2em;
+  color: #000000;
+}
+.prices_page .price_block:last-child {
+  margin-right: 0px;
+  padding-right: 0px;
+  border-right: none;
+}
+.prices_page .buttons {
+  display: block;
+  width: 150px;
+  height: 55px;
+  margin: 20px auto 0px auto;
+}

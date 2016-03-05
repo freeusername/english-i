@@ -1,0 +1,129 @@
+{% extends 'accounts/profile_edit.html' %}
+{% load i18n staticfiles custom_filters configs_tags meta_tags custom_tags %}
+
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}"/>
+{% endblock %}
+
+{% block js %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(document).on('submit', '.invoice_form', function (e) {
+                e.preventDefault();
+                var form = e.target;
+                $('*', form).removeClass('error');
+                $(this).ajaxSubmit({
+                    success: function (data) {
+                        $('*', form).removeClass('error');
+                        $('.error_message').hide();
+                        if (data['errors']) {
+                            $.each(data['errors'], function (k, v) {
+                                $('*[name=' + k + '][type!=submit]', form).each(function (form) {
+                                    var self = $(this);
+                                    self.addClass('error');
+                                    self.parents('.article_textarea, .textarea').addClass('error');
+                                });
+                                $('.error_message').show();
+                            });
+                        } else {
+                            $("#liqpay_block").html(data['liqpay_form']);
+                            $("#id_submit").trigger('click');
+                        }
+                    }
+                });
+            })
+        })
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="content_block">
+        <div class="content profile_page">
+
+            <div class="profile_links">
+                <ul>
+                    <li>
+                        <a href="{% url 'my_courses' %}" title="">{% trans 'My courses' %}</a>
+                    </li>
+                    <li>
+                        {% trans 'Payments' %}
+                    </li>
+                    <li>
+                        <a href="{% url 'profile' %}" title="">{% trans 'Profile' %}</a>
+                    </li>
+                </ul>
+            </div>
+            {% for invoice in np_invoices %}
+                <div class="invoice_block">
+                    <div class="invoice_table">
+                        <div class="cell body">
+                            {{ invoice.get_title }}
+                            <div class="description">
+                                {{ invoice.get_invoice_description }}
+                            </div>
+                        </div>
+                        <div class="cell amount">
+                            {% if LANGUAGE_CODE == 'en' %}
+                                <span class="currency">{% trans '$' %}</span>&nbsp;{{ invoice.price|floatformat:"-2" }}
+                            {% else %}
+                                {{ invoice.get_price_ru|floatformat:"-2" }}&nbsp;
+                                <span class="currency">{% trans '$' %}</span>
+                            {% endif %}
+                        </div>
+                        <div class="cell actions">
+                            <form class="invoice_form" action="" method="POST">
+                                {% csrf_token %}
+                                {{ form_set.management_form }}
+                                <input id="id_form-{{ forloop.counter0 }}-id_invoice"
+                                       name="form-{{ forloop.counter0 }}-id_invoice" type="hidden"
+                                       value="{{ invoice.pk }}">
+                                <input type="submit" name="" id="" value="{% trans 'Pay' %}" class="buttons"
+                                       style="display: block; width: 136px; height: 55px;"/>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="payment_logos">
+                        <img src="{% static 'img/visa_logo.png' %}" alt="" title=""/>
+                        <img src="{% static 'img/mastercard_logo.png' %}" alt="" title=""/>
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="payments_table">
+                <div class="captions">
+                    {% if p_invoices %}
+                        <div class="cell date">
+                            {% trans 'Date' %}
+                        </div>
+                        <div class="cell description">
+                            {% trans 'Description' %}
+                        </div>
+                        <div class="cell amount">
+                            {% trans 'Amount' %}
+                        </div>
+                    {% else %}
+                        {% trans 'You currently do not have any paid invoices.' %}
+                    {% endif %}
+                </div>
+                {% for invoice in p_invoices %}
+                    <div class="row">
+                        <div class="cell date">
+                            {{ invoice.created_at|date:'d-M-Y' }}
+                        </div>
+                        <div class="cell description">
+                            {{ invoice.get_title }}
+
+                            <p>{{ invoice.get_invoice_description }}</p>
+                        </div>
+                        <div class="cell amount">
+                            {{ invoice.price|floatformat:"-2" }}{% trans '$' %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div id="liqpay_block" style="display: none; visibility: hidden;"></div>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load i18n staticfiles custom_filters configs_tags meta_tags custom_tags %}
+
+{% block meta_tags %}
+    {% include_meta_tags course %}
+{% endblock %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/courses.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <div class="content_block">
+        <div class="content course_page">
+
+            <div class="main_row">
+                <div class="cell">
+                    <div class="course_block">
+                        {% if course.featured %}<span class="featured_label"></span>{% endif %}
+
+                        <h1 class="title">{{ course.title }}</h1>
+
+                        <div class="description">
+                            {{ course.description|safe }}
+                        </div>
+                    </div>
+                </div>
+                {% if course.image %}
+                    <div class="cell">
+                        <div class="image_block">
+                            <img src="{{ course.image_main.url }}" alt="" title=""/>
+                        </div>
+                    </div>
+                {% endif %}
+                <div class="clear_both"></div>
+            </div>
+
+            <div class="bottom_rom">
+                <div class="text_block">
+                    <div class="caption">{% trans 'Course program' %}:</div>
+                    {{ course.pros_cons|safe }}
+                </div>
+
+                <div class="right_block">
+                    <div class="central_container">
+                        {% if not subscribe %}<a href="{% url 'front_course_subscribed' course.pk %}" title=""
+                                                 class="start_course">{% trans 'Start a course' %}</a>{% endif %}
+
+                        <p class="info">
+                            <span class="lessons">{{ course.get_lessons }}</span>
+                            {% if course.duration %}<span class="duration">{{ course.get_duration }}</span>{% endif %}
+                        </p>
+                    </div>
+                </div>
+                <div class="clear_both"></div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

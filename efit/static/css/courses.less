@@ -1,0 +1,242 @@
+@import (reference) "base.less";
+
+/* courses styles */
+.courses_page {
+    width: 732px !important;
+    .featured_courses {
+        margin: 0px -20px;
+        .course {
+            display: inline-table;
+            position: relative;
+            width: 290px;
+            min-height: 264px;
+            margin: 0px 18px 20px 18px;
+            padding: 33px 32px 33px 24px;
+            vertical-align: top;
+            background: #EBEBEB none;
+        }
+        .featured_label {
+            display: block;
+            position: absolute;
+            z-index: 0;
+            top: -2px;
+            right: -3px;
+            width: 107px;
+            height: 106px;
+            background: url(../img/featured_course_label.png) 0px 0px no-repeat;
+        }
+        .title {
+            position: relative;
+            z-index: 1;
+            width: 230px;
+            padding-bottom: 19px;
+            .font(21px, 1.2em);
+            font-weight: bold;
+            a {
+                text-decoration: none;
+            }
+        }
+        .description {
+            position: relative;
+            z-index: 1;
+            padding-bottom: 0px;
+            .font(16px, 1.2em);
+        }
+        .info_block {
+            display: table;
+            width: 100%;
+            .info {
+                display: table-cell;
+                padding-bottom: 0px;
+                vertical-align: bottom;
+            }
+            .lessons {
+                display: block;
+                padding-bottom: 3px;
+                .font(18px, 1.2em);
+                font-weight: bold;
+            }
+            .duration {
+                display: block;
+                .font(14px, 1.2em);
+            }
+            .image {
+                display: table-cell;
+                width: 136px;
+                padding-bottom: 0px;
+                vertical-align: bottom;
+                a, img {
+                    display: block;
+                    width: inherit;
+                }
+            }
+        }
+        .bottom_row {
+            padding-top: 23px;
+            .more {
+                display: inline-block;
+                float: left;
+                height: 39px;
+                padding: 17px 30px 0px 30px;
+                .font(19px, 1.2em);
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: bold;
+                color: @white_color;
+                background: #039BE5 none;
+            }
+            .price {
+                display: block;
+                float: right;
+                margin-top: 5px;
+                padding-bottom: 0px;
+                .font(38px, 1.2em);
+                font-weight: bold;
+                text-align: right;
+                color: @blue_color;
+                .currency {
+                    .font(23px, 1.2em);
+                    color: @black_color;
+                }
+            }
+        }
+    }
+    .text_block {
+        padding: 35px 0px 0px 0px;
+        .font(18px, 1.7em);
+        .create_course {
+            .featured_courses > .bottom_row > .more;
+            display: inline-block;
+            float: none;
+            margin-top: 5px;
+        }
+    }
+    .other_courses {
+        .caption {
+            .content_block > .page_title;
+            padding: 50px 0px 25px 0px;
+        }
+        .course {
+            width: 732px;
+            margin-bottom: 30px;
+            padding: 35px 24px 19px 24px;
+            background: #EBEBEB none;
+        }
+        .title {
+            display: inline-block;
+            margin-bottom: 20px;
+            .font(22px, 1.2em);
+            font-weight: bold;
+        }
+        .description {
+            .font(16px, 1.4em);
+        }
+        .bottom_row {
+            padding-top: 15px;
+            text-align: right;
+            .more {
+                .featured_courses > .bottom_row > .more;
+                display: inline-block;
+                float: none;
+            }
+        }
+    }
+}
+
+/* course styles */
+.course_page {
+    width: 906px !important;
+    padding-top: 45px;
+    padding-bottom: 30px;
+    .main_row {
+        width: 100%;
+        padding-bottom: 56px;
+    }
+    .cell {
+        display: table-cell;
+        text-align: left;
+        vertical-align: bottom;
+    }
+    .cell:first-child{
+        vertical-align: top;
+    }
+    .course_block {
+        position: relative;
+        width: 500px;
+        margin-right: 38px;
+        padding: 40px 18px 25px 18px;
+        background: #EBEBEB none;
+        .featured_label {
+            .courses_page > .featured_courses > .featured_label;
+        }
+        .title {
+            position: relative;
+            z-index: 1;
+            width: 465px;
+            padding-bottom: 30px;
+            .font(34px, 1.2em);
+            font-weight: bold;
+        }
+        .description {
+            position: relative;
+            z-index: 1;
+            .font(18px, 1.7em);
+        }
+    }
+    .image_block {
+        width: 332px;
+        margin: 0px 0px 0px auto;
+        a, img {
+            display: block;
+            width: inherit;
+        }
+    }
+    .text_block {
+        float: left;
+        width: 500px;
+        padding: 0px 18px 0px 18px;
+        .font(18px, 1.7em);
+        .caption {
+            padding-bottom: 23px;
+            .font(25px, 1.2em);
+            font-weight: bold;
+        }
+        .learn_list {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+            li {
+                margin: 0px;
+                padding: 17px 0px;
+            }
+        }
+    }
+    .right_block {
+        float: right;
+        width: 332px;
+        .central_container {
+            display: table;
+            width: auto;
+            margin: 0px auto;
+        }
+        .start_course {
+            .courses_page > .featured_courses > .bottom_row > .more;
+            display: block;
+            float: none;
+            margin: 0px auto 19px auto;
+        }
+        .info {
+            color: @light_grey;
+            .lessons {
+                display: block;
+                padding-bottom: 3px;
+                .font(18px, 1.2em);
+                font-weight: bold;
+            }
+            .duration {
+                display: block;
+                .font(14px, 1.2em);
+            }
+        }
+    }
+}

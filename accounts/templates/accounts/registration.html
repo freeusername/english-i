@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load i18n staticfiles custom_filters configs_tags meta_tags custom_tags %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <div class="content_block">
+        <div class="content registration_page">
+
+            <h1 class="page_title">{% trans 'Sign up to start learning' %}</h1>
+
+            <div class="notice_block">
+                {% trans 'We need only basic things to register and start. You can complete your profile later.' %}
+            </div>
+
+            <div class="form_block">
+                <form method="POST" action="{{ app_path }}" id="registration_form">
+                    {% csrf_token %}
+                    <label for="{{ form.first_name.auto_id }}" class="labels">{% trans 'First Name' %}</label>
+                    {{ form.first_name }}
+
+                    <label for="{{ form.last_name.auto_id }}" class="labels">{% trans 'Last Name' %}</label>
+                    {{ form.last_name }}
+
+                    <label for="{{ form.email.auto_id }}" class="labels">{% trans 'E-mail' %}</label>
+                    {{ form.email }}
+
+                    <div class="error_notice"></div>
+
+                    <div class="bottom_row">
+                        <input type="submit" name="" id="" value="{% trans 'Sign Up' %}" class="buttons" style="width: auto; height: 56px"/>
+                    </div>
+
+                    <div class="bottom_links">
+                        <a href="{% url 'login' %}" title="">{% trans 'Already have an account?' %}</a>
+                        <div class="clear_both"></div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

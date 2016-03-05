@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load i18n staticfiles custom_filters configs_tags meta_tags custom_tags %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}"/>
+{% endblock %}
+
+{% block js %}
+    {{ block.super }}
+    <script src="{% static 'js/jquery.ezmark.js' %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.login_page .checkboxes').ezMark();
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="content_block">
+        <div class="content login_page">
+
+            <h1 class="page_title">{% trans 'Log in and learn' %}</h1>
+
+            <div class="form_block">
+                <form action="{{ app_path }}" method="post" id="login_form">
+                {% csrf_token %}
+                <label for="{{ form.username.auto_id }}" class="labels">{% trans 'E-mail' context "login" %}</label>
+                {{ form.username }}
+
+                <label for="{{ form.password.auto_id }}" class="labels">{% trans 'Password' %}</label>
+                {{ form.password }}
+
+                <div class="error_notice"></div>
+
+                <div class="bottom_row">
+                    <input type="submit" name="" id="" value="{% trans 'Log In' %}" class="buttons"/>
+                    <label for="{{ form.remember_me.auto_id }}" class="remember_me">
+                        {{ form.remember_me }}
+                        <span class="label">{% trans 'Remember me' %}</span>
+                    </label>
+
+                    <div class="clear_both"></div>
+                </div>
+                </form>
+                <div class="forgot_password">
+                    <a href="{% url 'accounts_password_reset' %}" title="">{% trans 'Forgot Password?' %}</a>
+                    <a href="{% url 'registration' %}" title="" style="float: right;">{% trans 'Do not have account?' %}</a>
+
+                    <div class="clear_both"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

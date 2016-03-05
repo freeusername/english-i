@@ -1,0 +1,299 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-29 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: apps.py:7
+msgid "Courses"
+msgstr "Курсы"
+
+#: models.py:14
+msgid "Course front"
+msgstr "Основной курс"
+
+#: models.py:15
+msgid "Course personal"
+msgstr "Личный курс"
+
+#: models.py:20 models.py:43 models.py:133
+msgid "position"
+msgstr "позиция"
+
+#: models.py:21
+msgid "show link?"
+msgstr "отобразить ссылку?"
+
+#: models.py:22 models.py:46 models.py:135
+msgid "title"
+msgstr "название"
+
+#: models.py:23 models.py:51 models.py:136
+msgid "description"
+msgstr "описание"
+
+#: models.py:24 models.py:137
+msgid "lessons"
+msgstr "уроков"
+
+#: models.py:26 models.py:65 models.py:139 models.py:174
+msgid "created at"
+msgstr "создано"
+
+#: models.py:27 models.py:66 models.py:140 models.py:175
+msgid "updated at"
+msgstr "обновлено"
+
+#: models.py:34
+msgid "skill"
+msgstr "умение"
+
+#: models.py:35
+msgid "skills"
+msgstr "умения"
+
+#: models.py:39
+msgid "type"
+msgstr "тип"
+
+#: models.py:44
+msgid "featured"
+msgstr ""
+
+#: models.py:47
+msgid "URL-path"
+msgstr ""
+
+#: models.py:48
+msgid ""
+"If you do not specify this field, it will be generated <b>automatically</b>."
+msgstr ""
+"Если вы не укажете это поле, оно будет сгенерирован <b>автоматически</b>."
+
+#: models.py:50
+msgid "short description"
+msgstr "краткое описание"
+
+#: models.py:52
+msgid "number of lessons"
+msgstr "количество уроков"
+
+#: models.py:53
+msgid "course duration"
+msgstr "длительность курса"
+
+#: models.py:54
+msgid "pros and cons of the course"
+msgstr "плюсы и минусы курса"
+
+#: models.py:55 models.py:170
+msgid "price"
+msgstr "цена"
+
+#: models.py:56
+msgid "preview"
+msgstr "превью"
+
+#: models.py:57 models.py:124
+msgid "image"
+msgstr "изображение"
+
+#: models.py:63
+msgid "leave it for professionals"
+msgstr "Посоветоваться с учителем"
+
+#: models.py:84 models.py:149 views.py:111
+msgctxt "1"
+msgid "lesson"
+msgstr "урок"
+
+#: models.py:85 models.py:149 views.py:111
+msgctxt "2-4"
+msgid "lessons"
+msgstr "урока"
+
+#: models.py:86 models.py:149 views.py:111
+msgctxt "5+"
+msgid "lessons"
+msgstr "уроков"
+
+#: models.py:90
+msgctxt "1"
+msgid "month"
+msgstr "месяц"
+
+#: models.py:91
+msgctxt "2-4"
+msgid "months"
+msgstr "месяца"
+
+#: models.py:92
+msgctxt "5+"
+msgid "months"
+msgstr "месяцев"
+
+#: models.py:106
+#, python-format
+msgid "Custom course %s"
+msgstr "Пользовательский курс %s"
+
+#: models.py:128
+msgid "course"
+msgstr "курс"
+
+#: models.py:129
+msgid "courses"
+msgstr "курсы"
+
+#: models.py:134
+msgid "recommended?"
+msgstr "рекомендуемое"
+
+#: models.py:163
+msgid "intensity"
+msgstr "интенсивность"
+
+#: models.py:164
+msgid "intensities"
+msgstr "интенсивности"
+
+#: models.py:169 models.py:196
+msgid "duration"
+msgstr "длительность"
+
+#: models.py:171
+msgid "full price"
+msgstr "полная цена"
+
+#: models.py:178
+#, python-format
+msgid "Duration %(duration)s minutes to the intensity of %(intensity)s"
+msgstr "Длительность %(duration)s минут для интенсивности %(intensity)s"
+
+#: models.py:197
+msgid "durations"
+msgstr "длительности"
+
+#: templates/courses/course_price.html:33
+#: templates/courses/course_price.html:34
+#: templates/courses/course_price.html:36
+#: templates/courses/course_price.html:37
+#: templates/courses/course_price.html:109
+#: templates/courses/course_price.html:113
+#: templates/courses/course_price.html:124
+#: templates/courses/course_price.html:128
+#: templates/courses/courses_list.html:47
+#: templates/courses/courses_list.html:50
+#: templates/courses/courses_list.html:80
+#: templates/courses/courses_list.html:83
+msgid "$"
+msgstr "Грн"
+
+#: templates/courses/course_price.html:57
+msgid "Prices"
+msgstr "Цены"
+
+#: templates/courses/course_price.html:64
+msgid "Chosen skills"
+msgstr "Выбранные умения"
+
+#: templates/courses/course_price.html:70
+msgid "Total duration"
+msgstr "Общая длительность"
+
+#: templates/courses/course_price.html:87
+msgid "Duration"
+msgstr "Длительность"
+
+#: templates/courses/course_price.html:98
+msgid "minutes"
+msgstr "минут"
+
+#: templates/courses/course_price.html:105
+msgid "Per lesson"
+msgstr "За урок"
+
+#: templates/courses/course_price.html:118
+msgid "Per month"
+msgstr "За месяц"
+
+#: templates/courses/course_price.html:138
+msgid "Select"
+msgstr "Выбрать"
+
+#: templates/courses/course_view.html:41
+msgid "Course program"
+msgstr "Программа курса"
+
+#: templates/courses/course_view.html:48
+msgid "Start a course"
+msgstr "Начать курс"
+
+#: templates/courses/courses_list.html:44
+#: templates/courses/courses_list.html:86
+msgid "Know more"
+msgstr "Больше"
+
+#: templates/courses/courses_list.html:62
+msgid "Create your own course"
+msgstr "Создайте свой собственный курс"
+
+#: templates/courses/courses_list.html:67
+msgid "Other courses"
+msgstr "Другие курсы"
+
+#: templates/courses/create_course.html:82
+msgid "Create a new course"
+msgstr "Создайте свой собственный курс"
+
+#: templates/courses/mail/signal_email.html:9
+#: templates/courses/mail/signal_email_subject.txt:1
+#, python-format
+msgid "Site user %(site_name)s need professional help."
+msgstr "Пользователь сайта %(site_name)s нуждается в помощи профессионалов."
+
+#: templates/courses/mail/signal_email.html:15
+#: templates/courses/mail/signal_email.txt:2
+msgid "Full name"
+msgstr "ФИО"
+
+#: templates/courses/mail/signal_email.html:16
+#: templates/courses/mail/signal_email.txt:3
+msgid "Phone"
+msgstr "Телефон"
+
+#: templates/courses/mail/signal_email.html:17
+#: templates/courses/mail/signal_email.txt:4
+msgid "Email"
+msgstr "Эл. Почта"
+
+#: templates/courses/mail/signal_email.html:18
+#: templates/courses/mail/signal_email.txt:5
+msgid "Profile"
+msgstr "Профиль"
+
+#: templates/courses/mail/signal_email.html:19
+#: templates/courses/mail/signal_email.txt:6
+msgid "Course"
+msgstr "Курс"
+
+#~ msgid "We will learn"
+#~ msgstr "Мы научимся"
+
+#~ msgid "Price for 60 minutes."
+#~ msgstr "Цена за 60 минут."

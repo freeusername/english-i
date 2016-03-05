@@ -1,0 +1,108 @@
+/* home styles */
+.home_letters {
+  padding-bottom: 20px;
+  text-align: center;
+}
+.home_letters .letter_block {
+  display: inline-table;
+  width: 200px;
+  margin: 0px 40px;
+  padding-top: 30px;
+  text-decoration: none;
+  vertical-align: top;
+}
+.home_letters .image {
+  display: block;
+  width: 116px;
+  height: 115px;
+  margin: 0px auto 15px auto;
+}
+.home_letters .text {
+  font-size: 20px;
+  line-height: 1.2em;
+  text-decoration: none;
+  color: #000000;
+}
+.home_letters .text b {
+  font-size: 24px;
+  line-height: 1.2em;
+  font-weight: normal;
+}
+.home_testimonials {
+  padding-top: 30px;
+}
+.home_testimonials .caption {
+  padding-bottom: 25px;
+  font-size: 24px;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+.home_testimonials .testimonials {
+  margin: 0px -15px;
+  text-align: left;
+}
+.home_testimonials .testimonial {
+  display: inline-table;
+  width: 255px;
+  min-height: 198px;
+  margin: 0px 15px 20px 15px;
+  padding: 20px 12px;
+  vertical-align: top;
+  border: 2px solid #D5EEFB;
+}
+.home_testimonials .title {
+  font-size: 16px;
+  line-height: 1.2em;
+  font-weight: bold;
+  text-align: center;
+}
+.home_testimonials .title a {
+  text-decoration: none;
+  color: #000000;
+}
+.home_testimonials .body {
+  padding-top: 10px;
+  font-size: 12px;
+  line-height: 1.3em;
+  text-align: center;
+}
+.home_testimonials .author {
+  display: table;
+  padding-top: 15px;
+}
+.home_testimonials .author .avatar,
+.home_testimonials .author .info_block {
+  display: table-cell;
+  padding-bottom: 0px;
+  vertical-align: middle;
+  text-align: left;
+}
+.home_testimonials .avatar {
+  width: 79px;
+  height: 79px;
+}
+.home_testimonials .avatar img {
+  display: block;
+  width: inherit;
+  height: inherit;
+  -webkit-border-radius: 40px 40px 40px 40px;
+  -moz-border-radius: 40px 40px 40px 40px;
+  border-radius: 40px 40px 40px 40px;
+}
+.home_testimonials .info_block {
+  width: 160px;
+  padding-left: 16px;
+  font-size: 12px;
+  line-height: 1.2em;
+}
+.home_testimonials .name {
+  font-weight: bold;
+}
+.home_testimonials .info {
+  display: block;
+  font-size: 11px;
+  line-height: 1.2em;
+  color: #939aa2;
+}

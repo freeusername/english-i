@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% load i18n staticfiles custom_filters configs_tags meta_tags custom_tags %}
+
+{% block meta_tags %}
+    {% include_meta_tags page %}
+{% endblock %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/slider.css' %}"/>
+{% endblock %}
+
+{% block js %}
+    {{ block.super }}
+    <script src="{% static 'js/jquery.slides.js' %}"></script>
+    <script type="text/javascript">
+        $(function () {
+            if ($('.slides .slide').length > 1) {
+                $('.slides').slidesjs({
+                    play: {
+                        active: true,
+                        effect: "slide",
+                        interval: {% get_config 'slide_interval' as slide_interval %}{% if slide_interval %}{{ slide_interval }}{% else %}7000{% endif %},
+                        auto: true,
+                        swap: false,
+                        pauseOnHover: false,
+                        restartDelay: 2500
+                    },
+                    navigation: {
+                        active: false,
+                        effect: "slide"
+                    },
+                    pagination: {
+                        active: true,
+                        effect: "slide"
+                    },
+                    effect: {
+                        fade: {
+                            speed: 250,
+                            crossfade: true
+                        }
+                    }
+                });
+            } else {
+                $(".slides").show();
+            }
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="content_block">
+        <section class="slider_block">
+            <div class="slides">
+                {% for slide in slides %}
+                    <div class="slide" style="background-image: url({{ slide.image.url }});">
+                        <div class="shaded_block"></div>
+                        <div class="caption">
+                            <div class="top_text">
+                                {{ slide.top_text|safe }}
+                            </div>
+                            <div class="bottom_text">
+                                {{ slide.bottom_text|safe }}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <div class="content">
+            {{ page.content|safe }}
+
+            {% if testimonials %}
+                <section class="home_testimonials">
+                    <div class="caption">{% trans 'Endorsements' %}</div>
+
+                    <div class="testimonials">
+                        {% for testimonial in testimonials %}
+                            <div class="testimonial">
+                                <div class="title">
+                                    {% if testimonial.link %}
+                                        <a href="{{ testimonial.link }}" title="">{{ testimonial.title }}</a>
+                                    {% else %}
+                                        {{ testimonial.title }}
+                                    {% endif %}
+                                </div>
+                                {% if testimonial.description %}
+                                    <div class="body">
+                                        {{ testimonial.description|truncatechars:280|safe }}
+                                    </div>
+                                {% endif %}
+                                <div class="author">
+                                    <p class="avatar">
+                                        {% if testimonial.link %}
+                                            <a href="{{ testimonial.link }}" title=""><img
+                                                    src="{{ testimonial.image_thumb.url }}" alt="" title=""/></a>
+                                        {% else %}
+                                            <img src="{{ testimonial.image_thumb.url }}" alt="" title=""/>
+                                        {% endif %}
+                                    </p>
+                                    {% if testimonial.full_name and testimonial.info %}
+                                        <p class="info_block">
+                                            {% if testimonial.full_name %}
+                                                {% if testimonial.link %}
+                                                    <a href="{{ testimonial.link }}" title=""
+                                                       class="name">{{ testimonial.full_name }}</a>
+                                                {% else %}
+                                                    {{ testimonial.full_name }}
+                                                {% endif %}
+                                            {% endif %}
+                                            {% if testimonial.info %}
+                                                <span class="info">{{ testimonial.info }}</span>
+                                            {% endif %}
+                                        </p>
+                                    {% endif %}
+                                    <div class="clear_both"></div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </section>{% endif %}
+
+        </div>
+    </div>
+{% endblock %}

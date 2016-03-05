@@ -1,0 +1,327 @@
+@import (reference) "base.less";
+
+/* profile styles */
+.profile_page {
+    width: 775px !important;
+    padding: 50px 0px;
+    .profile_links {
+        padding-bottom: 55px;
+        .font(17px, 1.2em);
+        ul {
+            display: block;
+            margin: 0px;
+            padding: 0px;
+        }
+        li {
+            list-style: none;
+            display: inline-block;
+            margin: 0px;
+            padding: 0px 35px 0px 0px;
+        }
+        a {
+            font-weight: bold;
+        }
+    }
+    .main_column {
+        float: left;
+        width: 550px;
+        .caption {
+            display: inline-block;
+            padding-bottom: 20px;
+            .font(36px, 1.2em);
+            font-weight: bold;
+        }
+        .edit_link {
+            margin-left: 30px;
+            .font(18px, 1.2em);
+        }
+        .info_block {
+            .font(18px, 1.2em);
+        }
+        .info_row {
+            margin: 20px 0px;
+        }
+        .label {
+
+        }
+    }
+    .right_column {
+        float: right;
+        width: 157px;
+        text-align: center;
+        .avatar {
+            width: 157px;
+            height: 157px;
+            margin-top: 21px;
+            margin-bottom: 15px;
+            a, img {
+               display: block;
+               width: inherit;
+               height: inherit;
+               .border_radius(80px, 80px, 80px, 80px);
+            }
+        }
+        .edit_link {
+            .font(18px, 1.2em);
+            color: @dark_color;
+        }
+    }
+    
+}
+
+/* profile courses styles */
+.profile_page {
+    .caption {
+        padding-bottom: 45px;
+    }
+    .courses {
+        float: left;
+        position: relative;
+        width: 385px;
+    }
+    .course {
+        position: relative;
+        padding: 22px;
+        .title {
+            padding-bottom: 15px;
+            .font(20px, 1.2em);
+            font-weight: bold;
+        }
+        .description {
+            .font(17px, 1.6em);
+        }
+    }
+    .current {
+        background: #F5F5F5 none;
+        .course_label {
+            display: block;
+            position: absolute;
+            top: 27px;
+            right: 22px;
+            width: 120px;
+            .font(14px, 1.2em);
+            font-style: italic;
+            text-align: right;
+        }
+        .title {
+            width: 220px;
+            min-height: 40px;
+        }
+    }
+    .courses_aside {
+        float: right;
+        width: 279px;
+        .font(19px, 1.2em);
+        text-align: center;
+        .create_course {
+            display: block;
+            width: 269px;
+            height: 38px;
+            margin: 0px auto;
+            padding: 18px 0px 0px 0px;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            color: @white_color;
+            background: #039BE5 none;
+        }
+    }
+}
+
+/* profile courses styles */
+.profile_page {
+    .invoice_block {    
+        width: 642px;
+        margin-bottom: 50px;
+        padding: 24px;
+        background: #F5F5F5 none;
+        .invoice_table {
+            display: table;
+            width: 100%;
+        }
+        .cell {
+            display: table-cell;
+            text-align: left;
+            vertical-align: top;
+        }
+        .body {
+            width: 346px;
+            .font(16px, 1.2em);
+            .title {
+                display: inline-block;
+                margin-bottom: 10px;
+                .font(21px, 1.2em);
+                font-weight: bold;
+                text-decoration: none;
+            }
+        }
+        .amount {
+            width: 120px;
+            padding: 0px 20px;
+            .font(38px, 1.2em);
+            font-weight: bold;
+            text-align: center;
+            vertical-align: middle;
+            color: @blue_color;
+            .currency {
+                .font(23px, 1.2em);
+                color: @black_color;
+            }
+        }
+        .actions {
+            text-align: right;
+            .pay_button {
+                display: inline-block;
+                width: 133px;
+                height: 38px;
+                margin: 0px auto;
+                padding: 18px 0px 0px 0px;
+                .font(19px, 1.2em);
+                font-weight: bold;
+                text-decoration: none;
+                text-transform: uppercase;
+                text-align: center;
+                color: @white_color;
+                background: #039BE5 none;
+            }
+        }
+        .payment_logos {
+            padding-top: 10px;
+            text-align: right;
+        }
+    }
+    .payments_table {
+        display: table;
+        width: 610px;
+        .font(16px, 1.6em);
+        .captions {
+            display: table-row;
+            .cell {
+                font-weight: bold;
+            }
+        }
+        .row {
+            display: table-row;
+        }
+        .cell {
+            display: table-cell;
+            padding-bottom: 35px;
+            text-align: left;
+            vertical-align: top;
+        }
+        .date {
+            width: 180px;
+            padding-right: 20px;
+        }
+        .description {
+            padding-right: 75px;
+            .title {
+                font-weight: bold;
+                text-decoration: none;
+            }
+            p {
+                padding-bottom: 0px;
+            }
+        }
+        .amount {
+            width: 140px;
+        }
+    }
+}
+
+/* own course style */
+.own_course_page {
+    width: 900px !important;
+    padding-bottom: 30px;
+    .own_course {
+        .font(18px, 1.7em);
+    }
+    .checkboxes_list {
+        display: table;
+        margin: 55px 0px 0px 0px;
+        .font(20px, 1.2em);
+        ul {
+            display: table-cell;
+            margin: 0px;
+            padding: 0px;
+            li{
+                display: block;
+                list-style: none;
+                min-width: 420px;
+                margin: 0px;
+                padding: 0px 0px 30px 0px;
+            }
+        }
+        .left_list {
+            float: left;
+            padding-right: 60px;
+        }
+        .right_list {
+            float: right;
+        }
+        .ez-checkbox {
+            width: 22px;
+            height: 19px;
+            background: transparent url('../img/checkboxes_bg_02.png') 0px 0px no-repeat;
+        }
+        .ez-checkbox.ez-checked {
+            background-position: 0px -20px;
+        }
+        .ez-checkbox.ez-selected {
+            background-position: 0px -20px;
+        }
+    }
+    .for_professionals {
+        display: block;
+        margin-bottom: 20px;
+        .ez-checkbox {
+            .checkboxes_list > .ez-checkbox;
+            display: block;
+            float: left;
+            margin-top: 4px;
+            margin-right: 16px;
+        }
+        .ez-checkbox.ez-checked {
+            .checkboxes_list > .ez-checkbox.ez-checked;
+        }
+        .ez-checkbox.ez-selected {
+            .checkboxes_list > .ez-checkbox.ez-selected;
+        }
+    }
+    .buttons {
+        height: 56px;
+        margin: 0px auto;
+        padding: 0px 15px;
+    }
+}
+
+/* edit profile */
+.profile_page {
+    .form_block {
+        .labels {
+            display: block;
+            padding-bottom: 8px;
+            .font(17px, 1.2em);
+            font-weight: bold;
+        }
+        .required {
+            color: @red_color;
+        }
+        .inputs {
+            display: block;
+            width: 378px;
+            height: 41px;
+            margin-bottom: 15px;
+            padding: 0px 10px;
+            .font(17px, 1.2em);
+            border: 1px solid #999999;
+            .border_radius(2px, 2px, 2px, 2px);
+        }
+        .buttons {
+            height: 56px;
+            margin-top: 25px;
+            padding: 0px 25px;
+        }
+    }
+}

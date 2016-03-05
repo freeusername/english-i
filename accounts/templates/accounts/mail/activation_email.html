@@ -1,0 +1,22 @@
+{% load i18n configs_tags %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>{% trans "Account activation on" %} {{ site.name }}</title>
+</head>
+
+<body>
+{% get_config 'mail_message_main' %}
+<p>
+Password: {{ password }}
+</p>
+<p>
+    <a href="http://{{site.domain}}{% url 'registration_activate' activation_key %}">
+        http://{{site.domain}}{% url 'registration_activate' activation_key %}
+    </a>
+</p>
+{% get_config 'mail_message_signature' %}
+</body>
+
+</html>

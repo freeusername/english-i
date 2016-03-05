@@ -1,0 +1,17 @@
+*.pyc
+*.pyo
+*.pyw
+*.db
+.idea
+*~
+*.tar.gz
+*.orig
+.project
+.pydevproject
+.pydevproject
+.settings
+/media/*
+*/media/*
+/nbproject*
+local_settings.py
+test_settings.py

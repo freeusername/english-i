@@ -1,0 +1,119 @@
+@import (reference) "base.less";
+
+/* prices styles */
+.prices_page {
+    width: 753px !important;
+    padding-bottom: 50px;
+    .page_title {
+        padding-bottom: 30px;
+    }
+    .text_block {
+        padding-bottom: 55px;
+        .font(18px, 1.5em);
+    }
+    .price_block {
+        float: left;
+        position: relative;
+        width: 217px;
+        margin-right: 25px;
+        margin-bottom: 30px;
+        padding-right: 25px;
+        .font(16px, 1.2em);
+        border-right: 1px solid #C2C2C2;
+        .recomended_label {
+            position: absolute;
+            z-index: 0;
+            top: -2px;
+            right: -3px;
+            width: 106px;
+            height: 106px;
+            background: url(../img/recomended_label.png) 0px 0px no-repeat;
+        }
+        form {
+            position: relative;
+            z-index: 1;
+        }
+        .title {
+            width: 150px;
+            padding-bottom: 7px;
+            .font(21px, 1.2em);
+            font-weight: bold;
+            color: @blue_color;
+            a {
+                text-decoration: none;
+            }
+        }
+        .short_info {
+            width: 180px;
+            padding-bottom: 35px;
+            font-style: italic;
+        }
+        .duration {
+            padding-bottom: 35px;
+            .font(14px, 1.2em);
+            .caption {
+                padding-bottom: 10px;
+                .font(16px, 1.2em);
+                font-weight: bold;
+            }
+            .duration_radio {
+                display: block;
+                float: left;
+                position: relative;
+                padding-left: 21px;
+            }
+            .hour {
+                margin-right: 15px;
+            }
+        }
+        .price {
+            padding-bottom: 25px;
+            .label,
+            .value {
+                display: table-cell;
+                padding-bottom: 0px;
+                font-weight: bold;
+                text-align: left;
+                vertical-align: middle;
+            }
+            .label {
+                width: 123px;
+                .lessons {  
+                    display: block;
+                    padding-top: 5px;
+                    .font(14px, 1.2em);
+                    font-weight: normal;
+                }
+            }
+        }
+        .per_lesson {
+            .value {
+                .currency {
+                    .font(16px, 1.2em);
+                    color: @black_color;
+                }
+            }
+        }
+        .per_month {
+            .value {
+                .font(38px, 1.2em);
+                color: @blue_color;
+                .currency {
+                    .font(23px, 1.2em);
+                    color: @black_color;
+                }
+            }
+        }
+    }
+    .price_block:last-child {
+        margin-right: 0px;
+        padding-right: 0px;
+        border-right: none;
+    }
+    .buttons {
+        display: block;
+        width: 150px;
+        height: 55px;
+        margin: 20px auto 0px auto;
+    }
+}

@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+{% load i18n staticfiles custom_filters configs_tags meta_tags custom_tags %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}"/>
+{% endblock %}
+
+{% block js %}
+    {{ block.super }}
+    <script type="text/javascript">
+    $(document).ready(function () {
+        // open dialog for - input #id_image
+        $('a#id_upload_avatar').click(function () {
+            $('#profile-edit_form').find('#id_avatar').trigger('click');
+        });
+        // upload photo
+        function handleFileSelect(evt) {
+            var files = evt.target.files;
+            var f = files[0];
+
+            var type_f = f.type.match('image.*');
+
+            if (type_f) {
+                if (type_f != 'image/jpeg' && type_f != 'image/png' && type_f != 'image/gif') {
+                    displayingMessageNoty('warning', '{% trans 'Изображения такого формата не поддерживаются.' %}');
+                    return false;
+                } else if (f.size > 1000000) {
+                    displayingMessageNoty('warning', '{% trans 'Размер изображения превышает лимит в 1 mb.' %}');
+                    return false;
+                }
+            } else {
+                displayingMessageNoty('warning', '{% trans 'Файлы такого формата не поддерживаются.' %}');
+                return false;
+            }
+
+            var reader = new FileReader();
+
+            reader.onload = (function (theFile) {
+                return function (e) {
+                    // Render thumbnail.
+                    var $curr_photo = $('#id_curr_avatar');
+                    $curr_photo.attr('src', e.target.result);
+                };
+            })(f);
+
+            reader.readAsDataURL(f);
+        }
+
+        $('#profile-edit_form #id_avatar').on('change', function (e) {
+            handleFileSelect(e);
+            return false;
+        });
+    })
+    </script>
+{% endblock %}
+
+
+{% block content %}
+    <div class="content_block">
+        <div class="content profile_page">
+
+            <div class="profile_links">
+                <ul>
+                    <li>
+                        <a href="{% url 'my_courses' %}" title="">{% trans 'My courses' %}</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'profile_payments' %}" title="">{% trans 'Payments' %}</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'profile' %}" title="">{% trans 'Profile' %}</a>
+                    </li>
+                </ul>
+            </div>
+            <form name="" id="profile-edit_form" action="{{ app_path }}" method="POST">
+            <div class="profile_block">
+                <div class="main_column">
+                    <h1 class="caption">{% trans 'Profile' %}</h1>
+                    <div id="success" style="display: none; padding-bottom: 10px; color: green;">{% trans 'Your data was successfully changed' %}</div>
+                    <div class="form_block">
+
+                            {% csrf_token %}
+                            <label for="" class="labels"><span class="required">*</span>{% trans 'First name' %}:</label>
+                            {{ form.first_name }}
+
+                            <label for="" class="labels"><span class="required">*</span>{% trans 'Last name' %}:</label>
+                            {{ form.last_name }}
+
+                            <label for="" class="labels">{% trans 'Tel' %}:</label>
+                            {{ form.phone }}
+
+                            <label for="" class="labels">{% trans 'City' %}:</label>
+                            {{ form.city }}
+
+                            <label for="" class="labels">{% trans 'Company' %}:</label>
+                            {{ form.company }}
+
+                            <label for="" class="labels">{% trans 'Skype name' %}:</label>
+                            {{ form.company }}
+
+                            <label for="" class="labels"><span class="required">*</span>{% trans 'E-mail' %}:</label>
+                            {{ form.email }}
+
+                            <label for="" class="labels"><span class="required">*</span>{% trans 'Old Password' %}:</label>
+                            {{ form.old_password }}
+
+                            <label for="" class="labels"><span class="required">*</span>{% trans 'New Password' %}:</label>
+                            {{ form.new_password1 }}
+
+                            <label for="" class="labels"><span class="required">*</span>{% trans 'Repeat Password' %}:</label>
+                            {{ form.new_password2 }}
+
+                            <div class="error_notice"></div>
+
+                            <input type="submit" name="" id="" value="{% trans 'Save changes' %}" class="buttons"/>
+                    </div>
+                </div>
+
+                <div class="right_column">
+                    <div class="avatar">
+                        {% if user.avatar %}
+                            <img src="{{ user.avatar_view.url }}" alt="" title="" id="id_curr_avatar"/>
+                        {% else %}
+                            <img src="{% static 'img/profile_avatar.png' %}" alt="" title="" id="id_curr_avatar"/>
+                        {% endif %}
+                    </div>
+                    <a href="javascript:void(0);" id="id_upload_avatar" class="edit_link">{% trans 'Change an avatar' %}</a>
+                    <input id="id_avatar" name="avatar" type="file" style="display: none; visibility: hidden">
+                </div>
+                <div class="clear_both"></div>
+            </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
